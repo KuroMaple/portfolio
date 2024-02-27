@@ -1,0 +1,36 @@
+
+.app__main-container__inner {
+  padding: 20px;
+}
+.app__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app__header-logo {
+  cursor: pointer;
+  transition: all 50ms ease-in-out;
+}
+
+.app__header-logo:hover {
+  transform: scale(1.1);
+}
+
+.app__header-logo:active {
+  transform: scale(0.9);
+}
+
+
+.app__main-content {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.app__projects-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: right;
+}
