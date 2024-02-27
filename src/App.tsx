@@ -3,7 +3,7 @@ import './App.css'
 import placeHolderLogo from './assets/react.svg'
 
 import ProjectsList from './Components/ProjectsList'
-import Welcome from './Components/Welcome'
+import Welcome from './Components/Welcome/Welcome'
 
 function App() {
 
@@ -19,7 +19,7 @@ function App() {
               <li className='socails-chile'>Email</li>
               <li>Github</li>
               <li>Linkedin</li>
-            </ul>asdsa
+            </ul>
           </div>
         </header>
 
