@@ -19,7 +19,7 @@ function App() {
               <li className='socails-chile'>Email</li>
               <li>Github</li>
               <li>Linkedin</li>
-            </ul>
+            </ul>asdsa
           </div>
         </header>
 
