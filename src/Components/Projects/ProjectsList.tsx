@@ -3,7 +3,7 @@ import React from 'react'
 import "./ProjectList.css"
 const ProjectsList = () => {
   return (
-    <div>
+    <div className='container'>
       <h1 className='title' >Projects</h1>
       <ul>
         <li>Project 1</li>
