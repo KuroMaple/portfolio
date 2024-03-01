@@ -1,9 +1,10 @@
 import React from 'react'
 
+import "./ProjectList.css"
 const ProjectsList = () => {
   return (
     <div>
-      <h1>Projects</h1>
+      <h1 className='title' >Projects</h1>
       <ul>
         <li>Project 1</li>
         <li>Project 2</li>

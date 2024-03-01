@@ -21,6 +21,23 @@
   transform: scale(0.9);
 }
 
+.socials-parent {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.socials-parent__item{
+  width: 32px;
+  cursor: pointer;
+}
+.socials-parent__item:hover {
+  transform: scale(1.1);
+}
+.socials-parent__item:active {
+  transform: scale(0.9);
+}
+
 
 .app__main-content {
   display: flex;
@@ -28,7 +45,7 @@
   align-items: center;
 }
 
-.app__projects-list {
+.app__main-content__projects-list {
   display: flex;
   flex-direction: column;
   justify-content: left;
