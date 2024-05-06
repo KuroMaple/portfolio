@@ -5,7 +5,6 @@ import emailIcon from './assets/email icon.png'
 import githubIcon from './assets/github.png'
 import linkedinIcon from './assets/linkedin.png'
 import ProjectsList from './Components/Projects/ProjectsList'
-import Welcome from './Components/Welcome/Welcome'
 import { useState } from 'react'
 import Content from './Components/Content/Content'
 
