@@ -5,4 +5,14 @@ body {
   color: #d1d1d1;
   background-color: #1d1d20;
   font-family: "Montserrat", sans-serif;
+  height: 100vh;
+}
+
+body,html {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  height: 100%;
 }

@@ -1,0 +1,20 @@
+.app__top-header__socials{
+  border: 2px solid blueviolet;
+}
+
+.socials-parent {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.socials-parent__item{
+  width: 32px;
+  cursor: pointer;
+}
+.socials-parent__item:hover {
+  transform: scale(1.1);
+}
+.socials-parent__item:active {
+  transform: scale(0.9);
+}

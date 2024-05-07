@@ -1,4 +1,6 @@
-.welcome-title {
-  font-size: 100px;
-  font-weight: 200;
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
 }

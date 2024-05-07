@@ -1,0 +1,22 @@
+.projectOne_images {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.projectOne_images__item-1{
+  height: 500px;
+
+  border-radius: 10px;
+  transition: all 50ms ease-in-out;
+}
+
+.projectOne_images__item-2{
+height: 500px;
+object-fit: cover;
+border-radius: 10px;
+transition: all 50ms ease-in-out;
+}

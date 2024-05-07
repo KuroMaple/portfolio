@@ -13,3 +13,9 @@ ul {
   padding: 0;
   margin: 0;
 }
+
+.list-item {
+  cursor: pointer;
+  padding: 10px;
+  margin: 10px;
+}
