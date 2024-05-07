@@ -1,6 +1,5 @@
 .app__container{
   height: 69vh;
-
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -11,30 +10,26 @@
 }
 
 .app__container__right-container {
-  width: 50%;
+  width: 60%;
   border: 2px solid rgb(114, 141, 250);
 }
 
 .app__container__left-container {
-  width: 50%;
-  border: 2px solid salmon;
+  width: 40%;
   display: flex;
   flex-direction: column;
   align-items: start;
+  justify-content: space-between;
 }
 .app__container__left-container__title {
   display: flex;
   flex-direction: column;
-  border: 2px solid red;
-
+  gap: 10px;
 }
 .app__title-name {
   font-size: 3rem;
   letter-spacing: -0.025em;
   font-weight: 700;
-  border: 2px solid black;
-  width: fit-content;
-  padding: 5px;
   cursor: pointer;
 }
 
@@ -50,10 +45,17 @@
   font-size: 1.25rem;
   letter-spacing: -0.025em;
   font-weight: 500;
-  border: 2px solid black;
-  width: fit-content;
+  width: max-content;
+}
+
+.app__title-subtext{
+  font-size: 1rem;
+  letter-spacing: -0.025em;
+  font-weight: 200;
+  width: max-content;
+
 }
 
 .app__container__left-container__projects-list {
-  border: 2px solid salmon;
+  align-self: center;
 }

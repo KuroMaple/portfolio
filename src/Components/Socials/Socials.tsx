@@ -4,7 +4,7 @@ import githubIcon from '../../assets/github.png'
 import linkedinIcon from '../../assets/linkedin.png'
 const Socials = () => {
   return (
-    <div className='app__top-header__socials'>
+    <div className='socials-container'>
       <ul className='socials-parent'>
         <li> 
           <a href="mailto:h4hashmi@uwaterloo.ca" target='_blank'>

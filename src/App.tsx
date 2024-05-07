@@ -16,9 +16,9 @@ function App() {
 
       <div className='app__container__left-container'>
         <div className='app__container__left-container__title'>
-          <h1 className='app__title-name' onClick={() => setCurrentContent('Welcome')} >Hassan Hashmi</h1>
-          <h2 className='app__title-subtitle'>Frontend Developer</h2>
-          <p>I build fun and powerful tools</p>
+          <a className='app__title-name' onClick={() => setCurrentContent('Welcome')} >Hassan Hashmi</a>
+          <a className='app__title-subtitle'>Frontend Developer</a>
+          <a className='app__title-subtext'>I build fun and powerful tools</a>
         </div>
           
 

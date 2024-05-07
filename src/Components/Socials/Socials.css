@@ -1,5 +1,5 @@
-.app__top-header__socials{
-  border: 2px solid blueviolet;
+.socials-container {
+  align-self: center;
 }
 
 .socials-parent {

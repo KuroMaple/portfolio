@@ -6,7 +6,6 @@ import pokeViewThree from '../../../assets/pokeViewDarkMode.png'
 const PokeView = () => {
   return (
     <div>        
-      <h3>PokeView</h3>
       <p>PokeView is a web app to learn more about Pokemon. 
       It generates pokemon randomly and paints them in a 
       custom design that mimics the orignal DS games. 
