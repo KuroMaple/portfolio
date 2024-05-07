@@ -1,3 +1,9 @@
+.pokeview{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 15vh;
+}
 .projectOne_images {
   display: flex;
   flex-direction: column;
@@ -5,18 +11,21 @@
   align-items: center;
   margin-top: 20px;
   margin-bottom: 20px;
+  
 }
 
-.projectOne_images__item-1{
-  height: 500px;
-
+#pokeview__image-1{
+  scale: 0.95;
   border-radius: 10px;
   transition: all 50ms ease-in-out;
 }
 
-.projectOne_images__item-2{
-height: 500px;
-object-fit: cover;
-border-radius: 10px;
-transition: all 50ms ease-in-out;
+#pokeview__image-2 {
+  scale: 0.75;
+  border-radius: 10px;
+}
+
+#pokeview__image-3 {
+  scale: 0.95;
+  border-radius: 10px;
 }
