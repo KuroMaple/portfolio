@@ -1,17 +1,8 @@
-.pokeview{
+.pokeview {
   display: flex;
   flex-direction: column;
   gap: 20px;
   padding-bottom: 15vh;
-}
-.projectOne_images {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  
 }
 
 #pokeview__image-1{
