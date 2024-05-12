@@ -4,3 +4,8 @@
   justify-content: left;
   align-items: center;
 }
+
+.welcome__text-links {
+  color: rgb(43, 177, 255);
+  text-decoration: none;
+}

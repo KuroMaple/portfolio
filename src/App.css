@@ -4,7 +4,6 @@
   padding-bottom: 15vh;
   padding-left: 20vh;
   padding-right: 20vh;
-  scrollbar-gutter: stable;
 }
 
 .app__container__right-container {
@@ -15,28 +14,35 @@
 }
 
 .app__container__left-container {
-  width: 30%;
+  width: 30vw;
+  height: 75vh;
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: space-between;
   position: fixed;
   gap: 50px;
+  margin-left: 1vw;
 }
 .app__container__left-container__title {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0px;
 }
 .app__title-name {
   font-size: 3rem;
   letter-spacing: -0.025em;
   font-weight: 700;
   cursor: pointer;
+  border-radius: 5px;
+
 }
 
 .app__title-name:hover {
   transform: scale(1.1);
+  background-color: rgba(0, 0, 0, 2);
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .app__title-name:active {
@@ -46,18 +52,19 @@
 .app__title-subtitle {
   font-size: 1.25rem;
   letter-spacing: -0.025em;
-  font-weight: 500;
+  font-weight: 600;
   width: max-content;
 }
 
 .app__title-subtext{
+  padding-top: 3vh;
   font-size: 1rem;
   letter-spacing: -0.025em;
-  font-weight: 200;
+  font-weight: lighter;
   width: max-content;
 
 }
 
 .app__container__left-container__projects-list {
-  align-self: center;
+  align-self: flex-start;
 }
