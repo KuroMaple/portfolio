@@ -68,3 +68,10 @@
 .app__container__left-container__projects-list {
   align-self: flex-start;
 }
+
+.projects-list__text {
+  font-size: 1.25rem;
+  letter-spacing: -0.025em;
+  font-weight: 600;
+  width: max-content;
+}

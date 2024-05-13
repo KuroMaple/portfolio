@@ -9,3 +9,7 @@
   color: rgb(43, 177, 255);
   text-decoration: none;
 }
+
+.welcome__text-links:hover {
+  color: rgb(89, 251, 40);
+}

@@ -25,6 +25,7 @@ function App() {
           
 
         <div className='app__container__left-container__projects-list'>
+          <a className='projects-list__text'>Projects</a>
           <ProjectsList setCurrentContent={setCurrentContent}/>
         </div>
         <Socials />
