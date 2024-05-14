@@ -11,6 +11,7 @@
 .socials-parent__item{
   width: 32px;
   cursor: pointer;
+  
 }
 .socials-parent__item:hover {
   transform: scale(1.1);

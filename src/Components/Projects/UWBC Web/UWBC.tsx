@@ -9,7 +9,7 @@ const UWBC = () => {
     <div className='uwbc'>        
       <p>
         A big problem within local badminton clubs is organzing efficient and fair systems to establish badminton games
-        between members. This project is a web application that aims to solve this problem by providing a platform for badminton organizers to manage their club's members on an interactive court application. 
+        between members. UWBC Web is a platform for badminton organizers to manage their club's members on an interactive court system. 
       </p> 
       <img src={uwbcOne} id='uwbc__image-1'/>
       <p>
@@ -18,7 +18,7 @@ const UWBC = () => {
       </p>
       <img src={uwbcTwo} id='uwbc__image-2'/>
       <p>
-        Members can then view their assigned courts via the member view page. To generate extra revenue for the club, the app has the option to display badminton ads on the member view page.
+        Members can then view their assigned courts via the member view page. To generate extra revenue for the club, the member view page can be customized to display ads.
       </p>
       <img src={uwbcThree} id='uwbc__image-3'/> 
     </div>

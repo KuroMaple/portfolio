@@ -2,6 +2,7 @@ import './Socials.css'
 import emailIcon from '../../assets/email icon.png'
 import githubIcon from '../../assets/github.png'
 import linkedinIcon from '../../assets/linkedin.png'
+import resumeIcon from '../../assets/pdfIcon.png'
 const Socials = () => {
   return (
     <div className='socials-container'>
@@ -23,6 +24,11 @@ const Socials = () => {
           </a>
         </li>
 
+        <li>
+          <a href="https://kuromaple.github.io/resume/" target='_blank'>
+            <img className='socials-parent__item' src={resumeIcon}/>
+          </a>
+        </li>
       </ul>
     </div>
   )
