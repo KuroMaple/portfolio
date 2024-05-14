@@ -8,7 +8,8 @@ const PokeView = () => {
   return (
     <div className='pokeview'>        
       <p>
-        PokéView is a web app to learn more about Pokemon. 
+        <a href='https://poke-view.netlify.app' className='welcome__text-links' target='_blank' >PokéView</a>&nbsp;
+         is a web app to learn more about Pokemon. 
         It generates pokemon randomly and paints them in a 
         custom design that mimics the orignal Nintendo DS games. 
       </p> 

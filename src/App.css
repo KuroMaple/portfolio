@@ -8,7 +8,6 @@
 
 .app__container__right-container {
   width: 61%;
-  overflow-y: scroll;
   height: max-content;
   float: right;
 }

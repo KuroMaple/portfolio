@@ -9,7 +9,9 @@ const UWBC = () => {
     <div className='uwbc'>        
       <p>
         A big problem within local badminton clubs is organzing efficient and fair systems to establish badminton games
-        between members. UWBC Web is a platform for badminton organizers to manage their club's members on an interactive court system. 
+        between members.&nbsp; 
+        <a href='https://uwbc-web-demo.netlify.app' className='welcome__text-links' target='_blank' >UWBC Web</a> 
+        &nbsp;is a platform for badminton organizers to manage their club's members on an interactive court system. 
       </p> 
       <img src={uwbcOne} id='uwbc__image-1'/>
       <p>
