@@ -1,76 +1,35 @@
-.app__container{
-  height: 69vh;
-  padding-top: 15vh;
-  padding-bottom: 15vh;
-  padding-left: 20vh;
-  padding-right: 20vh;
+.container{
+  padding-left: 6rem;
+  padding-right: 6rem;
 }
 
-.app__container__right-container {
-  width: 61%;
-  height: max-content;
-  float: right;
+
+
+.header {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  display: flex;
+  flex-direction: column;
+
 }
 
-.app__container__left-container {
-  width: 30vw;
-  height: 75vh;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: space-between;
-  position: fixed;
-  gap: 50px;
-  margin-left: 1vw;
-}
-.app__container__left-container__title {
-  display: flex;
-  flex-direction: column;
-  gap: 0px;
-}
-.app__title-name {
+.title-name {
   font-size: 3rem;
-  letter-spacing: -0.025em;
-  font-weight: 700;
+
   cursor: pointer;
-  border-radius: 5px;
-
 }
 
-.app__title-name:hover {
-  transform: scale(1.1);
-  background-color: rgba(0, 0, 0, 2);
-  padding-left: 5px;
-  padding-right: 5px;
-}
 
-.app__title-name:active {
-  transform: scale(0.9);
-}
-
-.app__title-subtitle {
+.title-profession {
   font-size: 1.25rem;
-  letter-spacing: -0.025em;
-  font-weight: 600;
-  width: max-content;
 }
 
-.app__title-subtext{
-  padding-top: 3vh;
+.title-subtext{
+  padding-top: 1rem;
   font-size: 1rem;
-  letter-spacing: -0.025em;
-  font-weight: lighter;
-  width: max-content;
-
 }
 
-.app__container__left-container__projects-list {
-  align-self: flex-start;
-}
 
-.projects-list__text {
-  font-size: 1.25rem;
-  letter-spacing: -0.025em;
-  font-weight: 600;
-  width: max-content;
-}
+
+
+

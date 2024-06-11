@@ -4,36 +4,41 @@ import { useState } from 'react'
 import Content from './Components/Content/Content'
 import Socials from './Components/Socials/Socials'
 
-export type ContentType = 'Welcome' | 'Project1' | 'Project2' | 'Project3'
+export type ContentType = 'About' | 'Project1' | 'Project2' | 'Project3'
 
 function App() {
 
-  const [currentContent, setCurrentContent] = useState<ContentType>('Welcome')
+  const [currentContent, setCurrentContent] = useState<ContentType>('About')
   console.log(currentContent)
 
   return (
-    <div className='app__container'>
-
-      <div className='app__container__left-container'>
-        <div className='app__container__left-container__title'>
-          <a className='app__title-name' onClick={() => setCurrentContent('Welcome')} >
+    <div className='container'>
+      <header className='header'>
+        
+        <div className='header__title'>
+          <h1 className='title-name' onClick={() => setCurrentContent('About')} >
             Hassan Hashmi
-          </a>
-          <a className='app__title-subtitle'>Frontend Developer</a>
-          <a className='app__title-subtext'>I build fun and powerful tools</a>
+          </h1>
+          <h2 className='title-profession'>Frontend Developer</h2>
+          <p className='title-subtext'>I build fun and powerful tools</p>
         </div>
           
 
-        <div className='app__container__left-container__projects-list'>
-          <a className='projects-list__text'>Projects</a>
-          <ProjectsList setCurrentContent={setCurrentContent}/>
-        </div>
+        <nav className='header__nav-bar'>
+          <ul className='nav-bar__list'>
+            <li>About</li>
+            <li>Experience</li>
+            <li>Projects</li>
+          </ul>
+          {/* <a className='projects-list__text'>Projects</a>
+          <ProjectsList setCurrentContent={setCurrentContent}/> */}
+        </nav>
         <Socials />
-      </div>
-
+      </header>
+      {/* 
       <div className='app__container__right-container'>
         <Content content={currentContent}/>
-      </div>
+      </div> */}
 
         
 

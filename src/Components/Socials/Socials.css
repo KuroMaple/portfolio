@@ -1,5 +1,6 @@
-.socials-container {
-  align-self: baseline;
+.socials__container {
+  display: flex;
+  flex-direction: row;
 }
 
 .socials-parent {
@@ -8,14 +9,31 @@
   flex-direction: row;
   gap: 20px;
 }
-.socials-parent__item{
-  width: 32px;
+.item-icon {
+  height: 1.5rem;
+  width: 1.5rem;
   cursor: pointer;
   
 }
-.socials-parent__item:hover {
-  transform: scale(1.1);
+
+.socials-item {
+  margin-right: 1.25rem;
+  color: rgb(71 85 105);
+}
+.socials-item:hover {
+  color: #d3deec;
 }
 .socials-parent__item:active {
   transform: scale(0.9);
 }
+
+.icon-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;}
