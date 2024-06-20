@@ -1,0 +1,33 @@
+.header__nav-bar {
+
+}
+
+.nav-bar__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: fit-content;
+  border: green 1px solid;
+}
+
+.nav-bar__item {
+  border: blue 1px solid;
+  font-size: 1rem;
+  cursor: pointer;
+  color: rgb(165, 172, 179);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.nav-bar__item:hover {
+  color: #d3deec;
+}
+
+.nav-bar__indicator {
+  width: 2rem;
+  height: 1px;
+  background-color: #d3deec;
+  border-radius: 0.25rem;
+  transition: all 0.3s ease;
+}

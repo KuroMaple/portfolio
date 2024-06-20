@@ -3,6 +3,7 @@ import ProjectsList from './Components/Projects/ProjectsList'
 import { useState } from 'react'
 import Content from './Components/Content/Content'
 import Socials from './Components/Socials/Socials'
+import NavBar from './Components/NavBar/NavBar'
 
 export type ContentType = 'About' | 'Project1' | 'Project2' | 'Project3'
 
@@ -12,7 +13,7 @@ function App() {
   console.log(currentContent)
 
   return (
-    <div className='container'>
+    <div className='app-container'>
       <header className='header'>
         
         <div className='header__title'>
@@ -24,15 +25,8 @@ function App() {
         </div>
           
 
-        <nav className='header__nav-bar'>
-          <ul className='nav-bar__list'>
-            <li>About</li>
-            <li>Experience</li>
-            <li>Projects</li>
-          </ul>
-          {/* <a className='projects-list__text'>Projects</a>
-          <ProjectsList setCurrentContent={setCurrentContent}/> */}
-        </nav>
+        <NavBar />
+
         <Socials />
       </header>
       {/* 

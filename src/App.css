@@ -1,6 +1,8 @@
-.container{
+.app-container{
   padding-left: 6rem;
   padding-right: 6rem;
+  min-height: 100vh;
+  height: 100vh;
 }
 
 
@@ -10,7 +12,8 @@
   padding-bottom: 6rem;
   display: flex;
   flex-direction: column;
-
+  justify-content: space-between;
+  height: calc(100vh - 12rem);
 }
 
 .title-name {
@@ -28,6 +31,7 @@
   padding-top: 1rem;
   font-size: 1rem;
 }
+
 
 
 
