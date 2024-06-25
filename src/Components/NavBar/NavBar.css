@@ -7,11 +7,11 @@
   flex-direction: column;
   gap: 1.5rem;
   width: fit-content;
-  border: green 1px solid;
 }
 
 .nav-bar__item {
-  border: blue 1px solid;
+  font-weight: 700;
+  letter-spacing: .1em;
   font-size: 1rem;
   cursor: pointer;
   color: rgb(165, 172, 179);
@@ -24,10 +24,28 @@
   color: #d3deec;
 }
 
-.nav-bar__indicator {
+.nav-bar__indicator-short {
   width: 2rem;
-  height: 1px;
+  height: 2px;
+  background-color: rgb(165, 172, 179);
+  border-radius: 0.25rem;
+  transition-duration: 0.15s;
+  /*Transition function starts fast and finishes slow*/
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  margin-right: 1rem;
+}
+
+.nav-bar__indicator-short:hover {
+  background-color: #d3deec;
+}
+
+.nav-bar__indicator-long {
+  width: 4rem;
+  height: 2px;
   background-color: #d3deec;
   border-radius: 0.25rem;
-  transition: all 0.3s ease;
+  /*Transition function starts fast and finishes slow*/
+  transition-duration: 0.15s;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  margin-right: 1rem;
 }
