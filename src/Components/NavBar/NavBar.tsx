@@ -6,18 +6,34 @@ const NavBar = () => {
   const [hovered, setHovered] = useState(-1)
 
   const renderlistElement = (index: number, text: string) => {
+    const reference = '#'+ text.toLowerCase()
+    let textSelectedColor
+    switch(index){
+    case 0:
+      textSelectedColor = '#C8F7C5'
+      break
+    case 1:
+      textSelectedColor = '#7fffd4'
+      break
+    case 2:
+      textSelectedColor = '#c5eff7'
+      break
+    }
     return (
       <li 
         onClick={() => setActive(index)}
         onMouseEnter={() => setHovered(index)}
         onMouseLeave={() => setHovered(-1)}
       >
-        <a className='nav-bar__item' >
+        <a className='nav-bar__item' href={reference}>
           {(active === index || hovered === index) ? 
             (<span className='nav-bar__indicator-long'>&nbsp;</span>) : 
             (<span className='nav-bar__indicator-short'>&nbsp;</span>)
           }
-          <span>{text}</span>
+          <span
+            style={{color : (active === index || hovered === index) ? textSelectedColor : '#a5acb3'}}
+          >{text}
+          </span>
         </a>
       </li>
     )
