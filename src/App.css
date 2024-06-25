@@ -3,17 +3,25 @@
   padding-right: 6rem;
   min-height: 100vh;
   height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  overflow: auto;
 }
 
 
 
-.header {
+.app-container__header {
   padding-top: 6rem;
   padding-bottom: 6rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: calc(100vh - 12rem);
+  width: 50%;
+  position: sticky;
+  top: 0;
 }
 
 .title-name {
@@ -32,6 +40,13 @@
   font-size: 1rem;
 }
 
+#main {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  border: salmon 1px solid;
+  width: 50%;
+  height: fit-content;
+}
 
 
 

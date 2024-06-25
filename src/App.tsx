@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div className='app-container'>
-      <header className='header'>
+      <header className='app-container__header'>
         
         <div className='header__title'>
           <h1 className='title-name' onClick={() => setCurrentContent('About')} >
@@ -29,10 +29,10 @@ function App() {
 
         <Socials />
       </header>
-      {/* 
-      <div className='app__container__right-container'>
-        <Content content={currentContent}/>
-      </div> */}
+      
+      <main id='main'>
+        <Content content='About' />
+      </main>
 
         
 
