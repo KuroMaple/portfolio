@@ -35,11 +35,11 @@ const Welcome = () => {
         &nbsp;fans.
       </p>
       <p>
-      Today, I'm passionate about developing interactive 
-      and user-friendly applications, whether that's through 
-      front-end development, full-stack solutions, or even game design. 
-      When I'm not coding, you'll find me pushing my limits at the gym, 
-      competing on the badminton court, bouldering, or spending quality time with friends and family.
+        Today, I'm passionate about developing interactive 
+        and user-friendly applications, whether that's through 
+        front-end development, full-stack solutions, or even game design. 
+        When I'm not coding, you'll find me pushing my limits at the gym, 
+        competing on the badminton court, bouldering, or spending quality time with friends and family.
       </p>
       
 

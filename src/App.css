@@ -90,12 +90,18 @@
 
   .app__container__left-container {
     width: 100%; /* Left container takes full width below right container */
-    position: static; /* Remove the fixed positioning to allow scroll */
+    position: relative;
     margin-left: 0;
+    align-items: center; /* Center the content */
+    height: min-content;
+  }
+
+  .app__container__left-container__projects-list {
+    align-self: center;
   }
 
   .app__title-name {
-    font-size: 20px;
+    font-size: 40px;
   }
 
   .app__title-subtitle {
