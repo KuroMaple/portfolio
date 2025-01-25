@@ -6,7 +6,17 @@ import pokeViewThree from '../../../assets/pokeViewDarkMode.png'
 
 const PokeView = () => {
   return (
-    <div className='pokeview'>        
+    <div className='pokeview'>  
+      <h1
+        style={{
+          fontSize: '1.5rem',
+          textAlign: 'left',
+          marginBottom: '-0.5rem',
+          
+        }}
+      >
+        PokéView
+      </h1>      
       <p>
         <a href='https://poke-view.netlify.app' className='welcome__text-links' target='_blank' >PokéView</a>&nbsp;
          is a web app to learn more about Pokemon. 

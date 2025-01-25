@@ -6,7 +6,17 @@ import uwbcThree from '../../../assets/uwbcWebMemberView.png'
 
 const UWBC = () => {
   return (
-    <div className='uwbc'>        
+    <div className='uwbc'>
+      <h1
+        style={{
+          fontSize: '1.5rem',
+          textAlign: 'left',
+          marginBottom: '-0.5rem',
+          
+        }}
+      >
+        UWBC Web
+      </h1>        
       <p>
         A big problem within local badminton clubs is organzing efficient and fair systems to establish badminton games
         between members.&nbsp; 
