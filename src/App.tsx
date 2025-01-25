@@ -19,8 +19,8 @@ function App() {
           <a className='app__title-name' onClick={() => setCurrentContent('Welcome')} >
             Hassan Hashmi
           </a>
-          <a className='app__title-subtitle'>Frontend Developer</a>
-          <a className='app__title-subtext'>I build fun and powerful tools</a>
+          <a className='app__title-subtitle'>Software Developer</a>
+          <a className='app__title-subtext'>Building innovative and powerful tools</a>
         </div>
          
 
