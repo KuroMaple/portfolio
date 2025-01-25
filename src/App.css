@@ -18,7 +18,6 @@
   display: flex;
   flex-direction: column;
   align-items: start;
-  justify-content: space-between;
   position: fixed;
   gap: 50px;
   margin-left: 1vw;
@@ -73,4 +72,73 @@
   letter-spacing: -0.025em;
   font-weight: 600;
   width: max-content;
+}
+
+/* Responsive Layout */
+@media (max-width: 1268px) {
+  .app__container {
+    flex-direction: column; /* Stack the containers vertically */
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  .app__container__right-container {
+    width: 100%; /* Right container takes full width on small screens */
+    order: -1; /* Ensure the right container appears first */
+    margin-bottom: 20px; /* Add some spacing after right container */
+  }
+
+  .app__container__left-container {
+    width: 100%; /* Left container takes full width below right container */
+    position: static; /* Remove the fixed positioning to allow scroll */
+    margin-left: 0;
+  }
+
+  .app__title-name {
+    font-size: 20px;
+  }
+
+  .app__title-subtitle {
+    font-size: 16px;
+  }
+
+  .app__title-subtext {
+    font-size: 12px;
+  }
+
+  .app__container__left-container__projects-list {
+    margin-top: 16px;
+  }
+
+  .projects-list__text {
+    font-size: 18px;
+  }
+
+  .app__container__right-container {
+    width: 100%;
+    padding: 12px;
+  }
+  .socials-parent {
+    flex-direction: column;
+    gap: 8px; /* Stack icons vertically */
+    align-items: center;
+  }
+
+  .socials-parent__item {
+    height: 20px;
+     /* Even smaller icons for very small screens */
+  }
+  
+  .welcome-container {
+    padding: 8px; /* Reduce padding on very small screens */
+  }
+
+  .welcome-container img {
+    max-width: 200px; /* Reduce image size for mobile */
+  }
+
+  .welcome-container p {
+    font-size: 0.95rem; /* Smaller font size for mobile */
+    line-height: 1.4;
+  }
 }

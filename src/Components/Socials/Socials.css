@@ -1,5 +1,8 @@
 .socials-container {
-  align-self: baseline;
+  position: fixed; /* Fix it to the bottom of the screen */
+  bottom: 20px; /* Add some space from the bottom */
+  left: 200px; /* Align it to the left */
+  z-index: 10; /* Ensure it's above other content */
 }
 
 .socials-parent {
@@ -11,7 +14,7 @@
 .socials-parent__item{
   width: 32px;
   cursor: pointer;
-  
+  object-fit: contain;
 }
 .socials-parent__item:hover {
   transform: scale(1.1);

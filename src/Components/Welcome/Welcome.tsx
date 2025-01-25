@@ -7,7 +7,7 @@ const Welcome = () => {
         src={facePic} 
         alt="Profile Picture" 
         style={{ 
-          width: '100%', // Adjust to the container's full width 
+          width: '30%', // Adjust to the container's full width 
           maxWidth: '300px', // Prevent it from being too large
           height: 'auto', // Maintain aspect ratio
           borderRadius: '10%', // Slightly rounded corners

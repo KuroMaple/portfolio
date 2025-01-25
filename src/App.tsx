@@ -22,23 +22,19 @@ function App() {
           <a className='app__title-subtitle'>Frontend Developer</a>
           <a className='app__title-subtext'>I build fun and powerful tools</a>
         </div>
-          
+         
 
         <div className='app__container__left-container__projects-list'>
           <a className='projects-list__text'>Projects</a>
           <ProjectsList setCurrentContent={setCurrentContent}/>
         </div>
-        <Socials />
+        
       </div>
 
       <div className='app__container__right-container'>
         <Content content={currentContent}/>
       </div>
-
-        
-
-      
-
+      <Socials />
     </div>
   )
 }
