@@ -31,19 +31,25 @@
   font-size: 3rem;
   letter-spacing: -0.025em;
   font-weight: 700;
-  cursor: pointer;
   border-radius: 5px;
-
+  display: flex;
+  align-items: center;
 }
 
-.app__title-name:hover {
-  transform: scale(1.1);
+.homeButton {
+  border-radius: 5px;
+  padding: 5px;
+  width: 32px;
+}
+.homeButton:hover {
+  cursor: pointer;
   background-color: rgba(0, 0, 0, 2);
   padding-left: 5px;
   padding-right: 5px;
+  transform: scale(1.1);
 }
 
-.app__title-name:active {
+.homeButton:active {
   transform: scale(0.9);
 }
 
@@ -75,7 +81,7 @@
 }
 
 /* Responsive Layout */
-@media (max-width: 1268px) {
+@media (max-width: 1350px) {
   .app__container {
     flex-direction: column; /* Stack the containers vertically */
     padding-left: 5vw;
