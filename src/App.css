@@ -124,16 +124,6 @@
     width: 100%;
     padding: 12px;
   }
-  .socials-parent {
-    flex-direction: column;
-    gap: 8px; /* Stack icons vertically */
-    align-items: center;
-  }
-
-  .socials-parent__item {
-    height: 20px;
-     /* Even smaller icons for very small screens */
-  }
   
   .welcome-container {
     padding: 8px; /* Reduce padding on very small screens */
@@ -147,4 +137,37 @@
     font-size: 0.95rem; /* Smaller font size for mobile */
     line-height: 1.4;
   }
+
+  .socials-container {
+    position: relative !important; /* Remove fixed positioning */
+    padding-bottom: 10px;
+    z-index: 10; /* Optional: if you want to keep it above other content */
+    width: 100%; /* Ensure it spans the width of its container */
+    display: flex; /* Use flexbox to align items */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+
+  }
+  
+  .socials-parent {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  
+  .socials-parent__item {
+    width: 32px;
+    cursor: pointer;
+    object-fit: contain;
+  }
+  
+  .socials-parent__item:hover {
+    transform: scale(1.1);
+  }
+  
+  .socials-parent__item:active {
+    transform: scale(0.9);
+  }
+  
 }

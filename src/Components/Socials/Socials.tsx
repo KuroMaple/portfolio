@@ -8,7 +8,7 @@ const Socials = () => {
     <div className='socials-container'>
       <ul className='socials-parent'>
         <li> 
-          <a href="mailto:h4hashmi@uwaterloo.ca" target='_blank'>
+          <a href="mailto:hashmihassan47@gmail.com" target='_blank'>
             <img className='socials-parent__item' src={emailIcon} alt='email' />
           </a>
         </li>
