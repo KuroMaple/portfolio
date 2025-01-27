@@ -1,23 +1,5 @@
-:root { font-family: 'Inter', sans-serif; }
-@supports (font-variation-settings: normal) {
-  :root { 
-    font-family: 'Inter var', sans-serif; 
-    font-feature-settings: 'cv11';
-  }
-  
-}
+@import "tailwindcss";
 
 body {
-  color: #d1d1d1;
-  background-color: #1d1d20;
-  height: 100vh;
-}
-
-body,html {
-  margin: 0;
-  padding: 0;
-}
-
-#root {
-  height: 100%;
+  font-family: 'Montserrat', sans-serif;
 }

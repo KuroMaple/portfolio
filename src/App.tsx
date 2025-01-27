@@ -1,51 +1,12 @@
-import './App.css'
-import ProjectsList from './Components/Projects/ProjectsList'
-import { useState } from 'react'
-import Content from './Components/Content/Content'
-import Socials from './Components/Socials/Socials'
-import homeButton from './assets/home.png'
-
-export type ContentType = 'Welcome' | 'Project1' | 'Project2' | 'Project3'
 
 function App() {
 
-  const [currentContent, setCurrentContent] = useState<ContentType>('Welcome')
-
-
   return (
-    <div className='app__container'>
+    <div>
 
-      <div className='app__container__left-container'>
-        <div className='app__container__left-container__title'>
-          <div className='app__title-name'>
-            <a>Hassan Hashmi</a>
-            {currentContent !== 'Welcome' && (
-              <img 
-                className='homeButton' 
-                onClick={() => setCurrentContent('Welcome')} 
-                src={homeButton} 
-                alt='Home Button' 
-              />
-            )}
-          </div>
-          
-          
-          <a className='app__title-subtitle'>Software Developer</a>
-          <a className='app__title-subtext'>Building innovative and powerful tools</a>
-        </div>
-         
-
-        <div className='app__container__left-container__projects-list'>
-          <a className='projects-list__text'>Projects</a>
-          <ProjectsList setCurrentContent={setCurrentContent}/>
-        </div>
-        
-      </div>
-
-      <div className='app__container__right-container'>
-        <Content content={currentContent}/>
-      </div>
-      <Socials />
+      <h1
+        className='font-bold text-4xl text-center'
+      > hello world</h1>
     </div>
   )
 }
