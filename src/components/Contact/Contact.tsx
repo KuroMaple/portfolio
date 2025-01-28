@@ -16,7 +16,7 @@ const Contact = () => {
             className='bg-gradient-to-r from-sky-500 to-cyan-400 bg-clip-text text-transparent 
               text-4xl font-light md:text-6xl '
           >
-            Email me
+            Get in Touch
           </span>
         </h1>
         <p>
