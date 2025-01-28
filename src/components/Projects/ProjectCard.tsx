@@ -30,18 +30,15 @@ const ProjectCard:React.FC<Project> = (project) => {
       <div
         className='flex flex-col items-center gap-8 md:flex-row md:gap-24'
       >
-        <div>
-          <img
-            src={project.image}
-            alt={project.title}
-            className='sm:w-[100px] md:w-[120px] h-auto w-[80px] cursor-pointer rounded-2xl transition-all duration-300 hover:scale-105 
+
+        <img
+          src={project.image}
+          alt={project.title}
+          className='sm:w-[100px] md:w-[120px] h-auto w-[80px] cursor-pointer rounded-2xl transition-all duration-300 hover:scale-105 
           hover:shadow-2xl hover:shadow-cyan-600 bg-slate-700/20'
-            onClick={() => window.open(project.link, '_blank')}
-          />
-          <div className="absolute inset-0 bg-black/30 opacity-0 hover:opacity-100 transition-opacity flex items-center justify-center">
-            <p className="text-white text-sm font-medium">View Demo</p>
-          </div>
-        </div>
+          onClick={() => window.open(project.link, '_blank')}
+        />
+
         <div
           className='flex flex-col gap-5'
         >

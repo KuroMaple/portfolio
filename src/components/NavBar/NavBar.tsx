@@ -70,16 +70,19 @@ const NavBar = () => {
         className='hidden md:flex gap-5'>
         <li
           className='cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100 hover:text-emerald-400 text-3xl'
+          onClick={() => window.open('https://www.linkedin.com/in/hassan-hashmi/', '_blank')}
         >
           <FaLinkedin />
         </li>
         <li
           className='cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100 hover:text-teal-400 text-3xl'
+          onClick={() => window.open('https://github.com/KuroMaple', '_blank')}
         >
           <FaGithub />
         </li>
         <li
           className='cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100 hover:text-cyan-400 text-3xl'
+          onClick={() => window.open('https://kuromaple.github.io/resume/', '_blank')}
         >
           <TbFileCv />
         </li>
@@ -137,16 +140,21 @@ const NavBar = () => {
             className='flex flex-wrap gap-5'>
             <li
               className='cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100 hover:text-emerald-400 text-3xl'
+              onClick={() => window.open('https://www.linkedin.com/in/hassan-hashmi/', '_blank')}
             >
-              <FaLinkedin />
+              <FaLinkedin 
+                
+              />
             </li>
             <li
               className='cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100 hover:text-teal-400 text-3xl'
+              onClick={() => window.open('https://github.com/KuroMaple', '_blank')}
             >
               <FaGithub />
             </li>
             <li
               className='cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100 hover:text-cyan-400 text-3xl'
+              onClick={() => window.open('https://kuromaple.github.io/resume/', '_blank')}
             >
               <TbFileCv />
             </li>
