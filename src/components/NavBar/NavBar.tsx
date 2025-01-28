@@ -106,24 +106,28 @@ const NavBar = () => {
             <a
               href='#about'
               className='cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100 hover:text-emerald-400'
+              onClick={toggleMenu}
             >
               <li>About</li>
             </a>
             <a
               href='#technologies'
               className='cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100 hover:text-teal-400'
+              onClick={toggleMenu}
             >
               <li>Technogies</li>
             </a>
             <a
               href='#projects'
               className='cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100 hover:text-cyan-400'
+              onClick={toggleMenu}
             >
               <li>Projects</li>
             </a>
             <a
               href='#contact'
               className='cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100 hover:text-sky-500'
+              onClick={toggleMenu}
             >
               <li>Contact</li>
             </a>

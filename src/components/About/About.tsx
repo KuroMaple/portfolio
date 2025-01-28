@@ -50,15 +50,15 @@ const About = () => {
           <p className="md:text-base text-pretty text-sm text-slate-300">
             Passionate developer whose had the privilege of building software for a&nbsp;
             <a href="https://www.janacorporation.com" 
-              className="hover:bg-gradient-to-r hover:from-green-100 hover:to-green-500 hover:text-transparent hover:bg-clip-text" 
+              className="bg-gradient-to-r hover:from-green-100 hover:to-green-500 text-transparent bg-clip-text from-green-500 to-green-100" 
               target="_blank">GIS company</a>,&nbsp;
             my&nbsp;
             <a href="https://badmintonclub.uwaterloo.ca" 
-              className="hover:bg-gradient-to-r hover:from-cyan-100 hover:to-cyan-500 hover:text-transparent hover:bg-clip-text" 
+              className="bg-gradient-to-r hover:from-cyan-100 hover:to-cyan-500 text-transparent bg-clip-text from-cyan-500 to-cyan-100" 
               target="_blank">university badminton club</a> 
             &nbsp;, and my fellow&nbsp;
             <a href="https://poke-view.netlify.app" 
-              className="hover:bg-gradient-to-r hover:from-red-100 hover:to-red-600 hover:text-transparent hover:bg-clip-text" 
+              className="bg-gradient-to-r hover:from-red-100 hover:to-red-600 text-transparent bg-clip-text from-red-600 to-red-100" 
               target="_blank">Pokémon fans</a>
             &nbsp;.
           </p>
