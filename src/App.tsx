@@ -13,8 +13,8 @@ function App() {
         className='flex flex-col items-center px-4 md:px-8 lg:px-16 text-amber-100'
       >
         <NavBar />
-        {/* <About />
-        <Technologies />
+        <About />
+        {/* <Technologies />
         <Projects />
         <Contact /> */}
       </main>
