@@ -4,7 +4,7 @@ Welcome to my software portfolio repo! My name's Hassan, and I'm a software deve
 
 ## Technologies Used
 
-![React](https://img.shields.io/badge/React-%2320232a.svg?&style=for-the-badge&logo=react&logoColor=61DAFB)
+![React](https://img.shields.io/badge/React-%2320232a.svg?&style=for-the-badge&logo=react&logoColor=61DAFB)![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-%2305B2A3.svg?&style=for-the-badge&logo=tailwindcss&logoColor=white)
 
 ## Portfolio Features
 
