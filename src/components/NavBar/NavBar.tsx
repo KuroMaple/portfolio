@@ -1,12 +1,28 @@
-import { b } from 'motion/react-client'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { BiMenu, BiX } from 'react-icons/bi'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { TbFileCv } from 'react-icons/tb'
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const prevWidth = useRef(window.innerWidth) 
 
+  useEffect(() => {
+    const handleResize = () => { 
+      const currentWidth = window.innerWidth
+
+      if (prevWidth.current < 768 && currentWidth >= 768) {
+        setIsOpen(false)
+      }
+      prevWidth.current = currentWidth
+    }
+    
+    window.addEventListener('resize', handleResize)
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
+  
   const toggleMenu = () => {
     setIsOpen(!isOpen)
   }
