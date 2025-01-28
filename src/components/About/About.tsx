@@ -36,8 +36,8 @@ const About = () => {
             &nbsp;and set out to create a game that would make me "Robux Rich." 
             While initially driven by  greed, I quickly became captivated by the process of coding and the ability to bring my most creative and unconventional ideas to life. 
           </p> */}
-          <p className="md:text-base">
-            Passionate developer skilled in React, Python, and Tailwind. I've had the privilege of building software for a&nbsp;
+          <p className="md:text-base text-pretty text-sm text-slate-300">
+            Passionate developer whose had the privilege of building software for a&nbsp;
             <a href="https://www.janacorporation.com" 
               className="hover:bg-gradient-to-r hover:from-green-100 hover:to-green-500 hover:text-transparent hover:bg-clip-text" 
               target="_blank">GIS company</a>,&nbsp;
@@ -50,12 +50,6 @@ const About = () => {
               className="hover:bg-gradient-to-r hover:from-red-100 hover:to-red-600 hover:text-transparent hover:bg-clip-text" 
               target="_blank">Pokémon fans</a>
             &nbsp;.
-          </p>
-
-          <p>
-            I'm interested in developing interactive 
-            and user-friendly applications through 
-            front-end development, full-stack solutions, and game design. 
           </p>
         </div>
       </div>
