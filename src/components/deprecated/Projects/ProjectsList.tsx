@@ -5,7 +5,7 @@ import linkIcon from '../../assets/linkIcon.png'
 import codeIcon from '../../assets/codeIcon.png'
 
 import "./ProjectList.css"
-import { ContentType } from '../../App'
+import { ContentType } from '../../../App'
 
 interface Props {
   setCurrentContent: React.Dispatch<React.SetStateAction<ContentType>>
