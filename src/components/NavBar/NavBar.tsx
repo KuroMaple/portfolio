@@ -50,7 +50,7 @@ const NavBar = () => {
           href='#technologies'
           className='cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100 hover:text-teal-400'
         >
-          <li>Technogies</li>
+          <li>Technologies</li>
         </a>
         <a
           href='#projects'
@@ -118,7 +118,7 @@ const NavBar = () => {
               className='cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100 hover:text-teal-400'
               onClick={toggleMenu}
             >
-              <li>Technogies</li>
+              <li>Technologies</li>
             </a>
             <a
               href='#projects'
