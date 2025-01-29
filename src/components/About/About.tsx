@@ -1,4 +1,3 @@
-import { hr } from 'motion/react-client'
 import headshot from '../../assets/facePic.png'
 import { motion } from 'motion/react'
 
