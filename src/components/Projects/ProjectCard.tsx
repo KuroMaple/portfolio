@@ -28,7 +28,7 @@ const ProjectCard:React.FC<Project> = (project) => {
   return (
     <ScrollReveal>
       <div
-        className='flex flex-col items-center gap-8 md:flex-row md:gap-24'
+        className='flex flex-col items-center gap-8 md:flex-row md:gap-24 bg-amber-200 rounded-2xl h-[400px]'
       >
 
         <img

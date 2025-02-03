@@ -48,13 +48,13 @@ const Projects = () => {
         </h1>
       
         <div
-          className='flex w-full max-w-[1000px] flex-col gap-16 text-white'>
+          className='flex w-full max-w-[1000px] flex-row gap-16 text-white '>
           {
             projectsData.map((project, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: 100 }}
-                animate={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 100 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
                 <ProjectCard
