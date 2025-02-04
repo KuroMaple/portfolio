@@ -3,6 +3,7 @@ import pokeball from '../../assets/pokeballIcon.png'
 import cards from '../../assets//card-games-icon.png'
 import { motion } from 'motion/react'
 import ProjectCard, { Project, ScrollReveal } from './ProjectCard'
+import { useState } from 'react'
 
 
 const projectsData: Project[] = [
@@ -35,6 +36,7 @@ const projectsData: Project[] = [
 
 
 const Projects = () => {
+  const [selectedProject, setSelectedProject] = useState<Project>(projectsData[0])
   return (
     <div
       id='projects'
@@ -59,6 +61,8 @@ const Projects = () => {
               >
                 <ProjectCard
                   {...project}
+                  selectedProject={selectedProject}
+                  setSelectedProject={setSelectedProject}
                 />
               </motion.div>
             ))

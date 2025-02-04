@@ -10,6 +10,11 @@ export type Project = {
   technologies: string[]
 }
 
+interface ProjectCardProps extends Project {
+  selectedProject: Project
+  setSelectedProject: React.Dispatch<React.SetStateAction<Project>>
+}
+
 
 export const ScrollReveal = ({children}: {children: React.ReactNode}) => {
   return (
@@ -24,13 +29,18 @@ export const ScrollReveal = ({children}: {children: React.ReactNode}) => {
   )
 }
 
-const ProjectCard:React.FC<Project> = (project) => {
+const ProjectCard:React.FC<ProjectCardProps> = (project) => {
+  
   return (
     //<ScrollReveal>
     <div
-      className='flex flex-col items-center gap-8 md:flex-row md:gap-24 rounded-2xl h-[400px] w-[80px] overflow-hidden
+      className={`flex flex-col items-center gap-8 md:flex-row md:gap-24 rounded-2xl h-[400px] 
+        overflow-hidden
         transition-all duration-300 ease-[cubic-bezier(0.25, 1, 0.5, 1)] hover:scale-105
-        shadow-[0px_10px_30px_-5px_rgba(255,255,255,0.5)]'
+        shadow-[0px_10px_30px_-5px_rgba(255,255,255,0.5)]
+        justify-center
+        ${project.title === project.selectedProject.title ? 'w-[600px] ' : 'w-[80px] '}`}
+      onClick={() => project.setSelectedProject(project)}
     >
 
         
@@ -43,7 +53,8 @@ const ProjectCard:React.FC<Project> = (project) => {
         >
           
           <p
-            className='text-gray-400 flex flex-col justify-center overflow-hidden h-20 w-[520px] opacity-0 translate-y-[30px] transition-all duration-300 ease-in delay-300'
+            className='text-gray-400 flex flex-col justify-center overflow-hidden 
+            h-20 w-[520px] opacity-0 translate-y-[30px] transition-all duration-300 ease-in delay-300'
           >
             {project.description}
           </p>  
