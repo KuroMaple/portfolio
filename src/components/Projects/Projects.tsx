@@ -44,13 +44,13 @@ const Projects = () => {
     >
       <ScrollReveal>
         <h1
-          className='text-4xl font-light text-white md:text-6xl'
+          className='text-4xl font-light text-white md:text-6xl pb-8'
         >
         Projects
         </h1>
       
         <div
-          className='flex w-full max-w-[1000px] flex-row gap-16 text-white '>
+          className='flex w-full max-w-[1000px] flex-row gap-10 text-white '>
           {
             projectsData.map((project, index) => (
               <motion.div

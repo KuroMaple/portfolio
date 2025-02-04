@@ -35,30 +35,39 @@ const ProjectCard:React.FC<ProjectCardProps> = (project) => {
     //<ScrollReveal>
     <div
       className={`flex flex-col items-center gap-8 md:flex-row md:gap-24 rounded-2xl h-[400px] 
-        overflow-hidden
         transition-all duration-300 ease-[cubic-bezier(0.25, 1, 0.5, 1)] hover:scale-105
         shadow-[0px_10px_30px_-5px_rgba(255,255,255,0.5)]
         justify-center
+        bg-gradient-to-br from-slate-700 to-slate-800
+        cursor-pointer
         ${project.title === project.selectedProject.title ? 'w-[600px] ' : 'w-[80px] '}`}
-      onClick={() => project.setSelectedProject(project)}
-    >
+      onClick={() => {
 
-        
+        if (project.title === project.selectedProject.title){
+          window.open(project.link, '_blank')
+        }
+        else{
+          project.setSelectedProject(project)
+        }
+      }}
+    >
 
       <div
         className='flex flex-col gap-5'
       >
-        <div
-          className='flex flex-col gap-3'
-        >
-          
-          <p
-            className='text-gray-400 flex flex-col justify-center overflow-hidden 
-            h-20 w-[520px] opacity-0 translate-y-[30px] transition-all duration-300 ease-in delay-300'
+        {
+          project.title === project.selectedProject.title &&
+          <div
+            className='flex flex-col gap-3 h-[100px] w-[200px]'
           >
-            {project.description}
-          </p>  
-        </div>
+          
+            <p
+              className='text-white flex flex-col justify-center text-center text-sm font-semibold translate-y-[30px] transition-all duration-300 ease-in'
+            >
+              {project.description}
+            </p>  
+          </div>
+        }
         
         {/* <div
             className='flex flex-wrap gap-5'
@@ -80,21 +89,24 @@ const ProjectCard:React.FC<ProjectCardProps> = (project) => {
             }
           </div> */}
         <div
-          className='flex flex-wrap text-sm font-semibold gap-4'
+          className='flex flex-wrap text-sm font-semibold gap-4 items-center'
         >
-          {project.title}
-          {/* <FaCodeBranch 
-            className='text-3xl cursor-pointer  p-1 transition-all duration-300 hover:scale-105 text-green-500'
-            onClick={() => window.open(project.repo, '_blank')}
-          /> */}
-        </div>
-        <img
-          src={project.image}
-          alt={project.title}
-          className='sm:w-[50px] md:w-[50px] h-auto w-[50px] cursor-pointer rounded-2xl transition-all duration-300 hover:scale-105 
+          <img
+            src={project.image}
+            alt={project.title}
+            className='sm:w-[50px] md:w-[50px] h-auto w-[50px] cursor-pointer rounded-2xl transition-all duration-300 hover:scale-105 
           hover:shadow-2xl hover:shadow-cyan-600 bg-slate-700/20'
-          onClick={() => window.open(project.link, '_blank')}
-        />
+          />
+          { project.title === project.selectedProject.title &&
+            <>
+              {project.title}
+              <FaCodeBranch 
+                className='text-3xl cursor-pointer  p-1 transition-all duration-300 hover:scale-105 text-green-500'
+                onClick={() => window.open(project.repo, '_blank')}
+              />
+            </>}
+        </div>
+        
 
       </div>
     </div>
