@@ -26,42 +26,30 @@ export const ScrollReveal = ({children}: {children: React.ReactNode}) => {
 
 const ProjectCard:React.FC<Project> = (project) => {
   return (
-    <ScrollReveal>
-      <div
-        className='flex flex-col items-center gap-8 md:flex-row md:gap-24 bg-amber-200 rounded-2xl h-[400px]'
-      >
+    //<ScrollReveal>
+    <div
+      className='flex flex-col items-center gap-8 md:flex-row md:gap-24 rounded-2xl h-[400px] w-[80px] overflow-hidden
+        transition-all duration-300 ease-[cubic-bezier(0.25, 1, 0.5, 1)] hover:scale-105
+        shadow-[0px_10px_30px_-5px_rgba(255,255,255,0.5)]'
+    >
 
-        <img
-          src={project.image}
-          alt={project.title}
-          className='sm:w-[100px] md:w-[120px] h-auto w-[80px] cursor-pointer rounded-2xl transition-all duration-300 hover:scale-105 
-          hover:shadow-2xl hover:shadow-cyan-600 bg-slate-700/20'
-          onClick={() => window.open(project.link, '_blank')}
-        />
-
-        <div
-          className='flex flex-col gap-5'
-        >
-          <div
-            className='flex flex-col gap-3'
-          >
-            <div
-              className='flex flex-wrap text-xl font-semibold gap-4'
-            >
-              {project.title}
-              <FaCodeBranch 
-                className='text-3xl cursor-pointer  p-1 transition-all duration-300 hover:scale-105 text-green-500'
-                onClick={() => window.open(project.repo, '_blank')}
-              />
-            </div>
-            <p
-              className='text-gray-400'
-            >
-              {project.description}
-            </p>  
-          </div>
         
-          <div
+
+      <div
+        className='flex flex-col gap-5'
+      >
+        <div
+          className='flex flex-col gap-3'
+        >
+          
+          <p
+            className='text-gray-400 flex flex-col justify-center overflow-hidden h-20 w-[520px] opacity-0 translate-y-[30px] transition-all duration-300 ease-in delay-300'
+          >
+            {project.description}
+          </p>  
+        </div>
+        
+        {/* <div
             className='flex flex-wrap gap-5'
           >
             {
@@ -79,11 +67,27 @@ const ProjectCard:React.FC<Project> = (project) => {
                 </div>
               ))
             }
-          </div>
-
+          </div> */}
+        <div
+          className='flex flex-wrap text-sm font-semibold gap-4'
+        >
+          {project.title}
+          {/* <FaCodeBranch 
+            className='text-3xl cursor-pointer  p-1 transition-all duration-300 hover:scale-105 text-green-500'
+            onClick={() => window.open(project.repo, '_blank')}
+          /> */}
         </div>
+        <img
+          src={project.image}
+          alt={project.title}
+          className='sm:w-[50px] md:w-[50px] h-auto w-[50px] cursor-pointer rounded-2xl transition-all duration-300 hover:scale-105 
+          hover:shadow-2xl hover:shadow-cyan-600 bg-slate-700/20'
+          onClick={() => window.open(project.link, '_blank')}
+        />
+
       </div>
-    </ScrollReveal>
+    </div>
+    //</ScrollReveal>
   )
 }
 
