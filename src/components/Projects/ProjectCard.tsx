@@ -43,8 +43,8 @@ const ProjectCard:React.FC<ProjectCardProps> = (project) => {
         shadow-[0px_10px_30px_-5px_rgba(255,255,255,0.5)]
         justify-center cursor-pointer overflow-hidden relative
         ${project.title === project.selectedProject?.title 
-      ? 'w-[80px] sm:w-[200px] md:w-[400px] lg:w-[500px]' 
-      : 'w-[40px] sm:w-[60px] md:w-[200px] lg:w-[100px]'}       
+      ? 'w-[150px] sm:w-[200px] md:w-[400px] lg:w-[500px]' 
+      : 'w-[75px] sm:w-[100px] md:w-[200px] lg:w-[100px]'}       
       `}
         onClick={() => {
 
