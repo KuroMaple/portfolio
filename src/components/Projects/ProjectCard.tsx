@@ -42,7 +42,12 @@ const ProjectCard:React.FC<ProjectCardProps> = (project) => {
         transition-all duration-300 ease-[cubic-bezier(0.25, 1, 0.5, 1)] hover:scale-105
         shadow-[0px_10px_30px_-5px_rgba(255,255,255,0.5)]
         justify-center cursor-pointer overflow-hidden relative
-        ${project.selectedProject ? (project.title === project.selectedProject.title ? 'w-[600px]' : 'w-[80px]') : 'w-[80px]'}`}
+        ${project.selectedProject ? 
+      (project.title === project.selectedProject.title ? 
+        'w-[80px] sm:w-[200px] md:w-[400px] lg:w-[600px]' : 
+        'w-[40px] sm:w-[60px] md:w-[80px] lg:w-[100px]') : 
+      'w-[40px] sm:w-[60px] md:w-[80px] lg:w-[100px]'}
+      `}
         onClick={() => {
 
           if (project.title === project.selectedProject.title){
@@ -76,8 +81,7 @@ const ProjectCard:React.FC<ProjectCardProps> = (project) => {
               <img
                 src={project.image}
                 alt={project.title}
-                className="sm:w-[50px] md:w-[50px] h-auto w-[50px] cursor-pointer rounded-2xl transition-all duration-300 hover:scale-105 
-        hover:shadow-2xl hover:shadow-cyan-600 bg-slate-700/20"
+                className="sm:w-[50px] md:w-[50px] h-auto w-[50px] cursor-pointer rounded-2xl"
               />
               {project.title === project.selectedProject.title && ( // Conditional rendering
                 <div
@@ -85,7 +89,7 @@ const ProjectCard:React.FC<ProjectCardProps> = (project) => {
                 >
                   <span className="font-semibold">{project.title}</span> {/* Title in a span */}
                   <FaCodeBranch
-                    className="text-3xl cursor-pointer p-1 transition-all duration-300 hover:scale-105 text-green-500 hover:bg-green-500/40 hover:rounded-lg"
+                    className="text-3xl cursor-pointer p-1 transition-all duration-300 text-green-500 hover:bg-green-500/40 hover:rounded-lg z-10"
                     onClick={() => window.open(project.repo, '_blank')}
                   />
                 </div>
