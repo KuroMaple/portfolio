@@ -1,5 +1,6 @@
 import { motion } from 'motion/react'
 import { FaCodeBranch } from 'react-icons/fa6'
+import { FiExternalLink } from 'react-icons/fi'
 
 
 export type Project = {
@@ -52,7 +53,13 @@ const ProjectCard:React.FC<ProjectCardProps> = (project) => {
           }
         }}
       >
-
+        {
+          project.title === project.selectedProject.title &&
+          <FiExternalLink 
+            className='absolute top-2 right-2 text-3xl text-white'
+          />
+        }
+        
         <img
           src={project.background}
           alt={project.title}
