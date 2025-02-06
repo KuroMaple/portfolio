@@ -4,6 +4,7 @@ import cards from '../../assets//card-games-icon.png'
 import { motion } from 'motion/react'
 import ProjectCard, { Project, ScrollReveal } from './ProjectCard'
 import { useState } from 'react'
+import pokeViewBG from '../../assets/pokeviewBG.png'
 
 
 const projectsData: Project[] = [
@@ -13,7 +14,8 @@ const projectsData: Project[] = [
     image: pokeball,
     link: 'https://poke-view.netlify.app',
     repo: 'https://github.com/KuroMaple/Poke-View',
-    technologies: ['React', 'HTML', 'CSS']
+    technologies: ['React', 'HTML', 'CSS'],
+    background: pokeViewBG
   },
   {
     title: 'UWBC Web',

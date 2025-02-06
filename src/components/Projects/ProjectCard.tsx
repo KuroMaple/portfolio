@@ -8,6 +8,7 @@ export type Project = {
   link: string
   repo: string
   technologies: string[]
+  background?: string
 }
 
 interface ProjectCardProps extends Project {
@@ -38,7 +39,7 @@ const ProjectCard:React.FC<ProjectCardProps> = (project) => {
         transition-all duration-300 ease-[cubic-bezier(0.25, 1, 0.5, 1)] hover:scale-105
         shadow-[0px_10px_30px_-5px_rgba(255,255,255,0.5)]
         justify-center
-        bg-gradient-to-br from-slate-700 to-slate-800
+        w-full overflow-hidden
         cursor-pointer
         ${project.title === project.selectedProject.title ? 'w-[600px] ' : 'w-[80px] '}`}
       onClick={() => {
@@ -51,6 +52,12 @@ const ProjectCard:React.FC<ProjectCardProps> = (project) => {
         }
       }}
     >
+      {project.background && 
+      <img 
+        src={project.background}
+        alt={project.title}
+        className='fixed w-full h-full object-cover rounded-2xl opacity-25 -z-10'
+      />}
 
       <div
         className='flex flex-col gap-5'
@@ -62,7 +69,8 @@ const ProjectCard:React.FC<ProjectCardProps> = (project) => {
           >
           
             <p
-              className='text-white flex flex-col justify-center text-center text-sm font-semibold translate-y-[30px] transition-all duration-300 ease-in'
+              className='text-white flex flex-col justify-center text-center text-sm 
+              font-semibold translate-y-[30px] transition-all duration-300 ease-in'
             >
               {project.description}
             </p>  
