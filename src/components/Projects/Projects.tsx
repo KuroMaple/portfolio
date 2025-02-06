@@ -55,7 +55,8 @@ const Projects = () => {
         </h1>
       
         <div
-          className={`flex flex-wrap w-full max-w-[1000px] flex-row gap-10 text-white`}>
+          className={`flex flex-wrap w-full gap-10 text-white flex-col lg:flex-row`}
+        >
           {
             projectsData.map((project, index) => (
               <motion.div
