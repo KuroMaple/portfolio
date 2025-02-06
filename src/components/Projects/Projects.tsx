@@ -5,7 +5,8 @@ import { motion } from 'motion/react'
 import ProjectCard, { Project, ScrollReveal } from './ProjectCard'
 import { useState } from 'react'
 import pokeViewBG from '../../assets/pokeviewBG.png'
-
+import uwbcwebBG from '../../assets/uwbcwebBG.png'
+import nimBG from '../../assets/nimBG.png'
 
 const projectsData: Project[] = [
   {
@@ -23,7 +24,8 @@ const projectsData: Project[] = [
     image: badminton,
     link: 'https://uwbc-web-demo.netlify.app',
     repo: 'https://github.com/KuroMaple/uwbc-web',
-    technologies: ['React', 'Django', 'Python', 'PostgreSQL', 'Docker']
+    technologies: ['React', 'Django', 'Python', 'PostgreSQL', 'Docker'],
+    background: uwbcwebBG
   },
   {
     title: 'Nim',
@@ -31,7 +33,8 @@ const projectsData: Project[] = [
     image: cards,
     link: 'https://github.com/KuroMaple/nim',
     repo: 'https://github.com/KuroMaple/nim',
-    technologies: ['React', 'Node.js', 'Express.js', 'MongoDB']
+    technologies: ['React', 'Node.js', 'Express.js', 'MongoDB'],
+    background: nimBG
   },
 ]
 
@@ -52,7 +55,7 @@ const Projects = () => {
         </h1>
       
         <div
-          className='flex w-full max-w-[1000px] flex-row gap-10 text-white '>
+          className={`flex w-full max-w-[1000px] flex-row gap-10 text-white`}>
           {
             projectsData.map((project, index) => (
               <motion.div

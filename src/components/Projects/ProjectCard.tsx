@@ -8,7 +8,7 @@ export type Project = {
   link: string
   repo: string
   technologies: string[]
-  background?: string
+  background: string
 }
 
 interface ProjectCardProps extends Project {
@@ -31,17 +31,15 @@ export const ScrollReveal = ({children}: {children: React.ReactNode}) => {
 }
 
 const ProjectCard:React.FC<ProjectCardProps> = (project) => {
-  
+  console.log(project.background)
   return (
     //<ScrollReveal>
     <div
       className={`flex flex-col items-center gap-8 md:flex-row md:gap-24 rounded-2xl h-[400px] 
         transition-all duration-300 ease-[cubic-bezier(0.25, 1, 0.5, 1)] hover:scale-105
         shadow-[0px_10px_30px_-5px_rgba(255,255,255,0.5)]
-        justify-center
-        w-full overflow-hidden
-        cursor-pointer
-        ${project.title === project.selectedProject.title ? 'w-[600px] ' : 'w-[80px] '}`}
+        justify-center cursor-pointer overflow-hidden
+        ${project.selectedProject ? (project.title === project.selectedProject.title ? 'w-[600px]' : 'w-[80px]') : 'w-[80px]'}`}
       onClick={() => {
 
         if (project.title === project.selectedProject.title){
@@ -52,12 +50,12 @@ const ProjectCard:React.FC<ProjectCardProps> = (project) => {
         }
       }}
     >
-      {project.background && 
-      <img 
+
+      <img
         src={project.background}
         alt={project.title}
-        className='fixed w-full h-full object-cover rounded-2xl opacity-25 -z-10'
-      />}
+        className='absolute inset-0 w-full h-full object-cover opacity-20' />
+      
 
       <div
         className='flex flex-col gap-5'
@@ -109,7 +107,7 @@ const ProjectCard:React.FC<ProjectCardProps> = (project) => {
             <>
               {project.title}
               <FaCodeBranch 
-                className='text-3xl cursor-pointer  p-1 transition-all duration-300 hover:scale-105 text-green-500'
+                className='text-3xl cursor-pointer  p-1 transition-all duration-300 hover:scale-105 text-green-500 hover:bg-green-500/40 hover:rounded-lg'
                 onClick={() => window.open(project.repo, '_blank')}
               />
             </>}
