@@ -24,7 +24,7 @@ const projectsData: Project[] = [
     image: badminton,
     link: 'https://uwbc-web-demo.netlify.app',
     repo: 'https://github.com/KuroMaple/uwbc-web',
-    technologies: ['React', 'Django', 'Python', 'PostgreSQL', 'Docker'],
+    technologies: ['React', 'Django', 'PostgreSQL'],
     background: uwbcwebBG
   },
   {
