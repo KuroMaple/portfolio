@@ -20,7 +20,7 @@ const projectsData: Project[] = [
   },
   {
     title: 'UWBC Web',
-    description: 'A website for the University of Waterloo Badminton Club.',
+    description: 'A web tool for the University of Waterloo Badminton Club.',
     image: badminton,
     link: 'https://uwbc-web-demo.netlify.app',
     repo: 'https://github.com/KuroMaple/uwbc-web',
