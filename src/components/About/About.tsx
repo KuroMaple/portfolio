@@ -36,8 +36,10 @@ const About = () => {
           >
             Hassan Hashmi
           </h1>
+          {/* keep the element in the layout but hide its content so the spacing remains */}
           <h3
-            className='bg-gradient-to-r from-blue-500 to-green-400 bg-clip-text text-transparent opacity-80 text-2xl select-none md:text-3xl'
+            className='bg-gradient-to-r from-blue-500 to-green-400 bg-clip-text text-transparent opacity-80 text-2xl select-none md:text-3xl invisible'
+            aria-hidden="true"
           >
             Software Developer
           </h3>
@@ -50,7 +52,7 @@ const About = () => {
             While initially driven by  greed, I quickly became captivated by the process of coding and the ability to bring my most creative and unconventional ideas to life. 
           </p> */}
           <p className="md:text-base text-pretty text-sm text-slate-300">
-            Passionate developer whose had the privilege of building software for a&nbsp;
+            Passionate software developer whose had the privilege of building software for a&nbsp;
             <a href="https://www.janacorporation.com" 
               className="bg-gradient-to-r hover:from-green-100 hover:to-green-500 text-transparent bg-clip-text from-green-500 to-green-100" 
               target="_blank">SaaS company</a>,&nbsp;

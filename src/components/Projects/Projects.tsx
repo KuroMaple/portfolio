@@ -20,7 +20,7 @@ const projectsData: Project[] = [
   },
   {
     title: 'PokeView',
-    description: 'A web app to view and search for Pokemon.',
+    description: 'A web app to view and compare your favourite Pokemon.',
     image: pokeball,
     link: 'https://poke-view.netlify.app',
     repo: 'https://github.com/KuroMaple/Poke-View',
@@ -29,7 +29,7 @@ const projectsData: Project[] = [
   },
   {
     title: 'UWBC Web',
-    description: 'A web tool for the University of Waterloo Badminton Club.',
+    description: 'A tool for the University of Waterloo Badminton Club.',
     image: badminton,
     link: 'https://uwbc-web-demo.netlify.app',
     repo: 'https://github.com/KuroMaple/uwbc-web',
