@@ -2,7 +2,7 @@ import { motion } from 'motion/react'
 import { BiLogoMongodb, BiLogoTypescript } from 'react-icons/bi'
 import { FaReact } from 'react-icons/fa'
 import { RiTailwindCssFill } from 'react-icons/ri'
-import { SiExpress } from 'react-icons/si'
+import { SiFlutter } from 'react-icons/si'
 import pythonIcon from '../../assets/python.png'
 import cPlusPlusIcon from '../../assets/c-.png'
 
@@ -53,17 +53,6 @@ const Technologies = () => {
             className="cursor-pointer transition-all duration-300 hover:-translate-y-5 sm:w-[100px] md:w-[120px] h-auto w-[77px]"
           />
         </motion.div>
-        <motion.div 
-          variants={variants}
-          initial='hidden'
-          whileInView='visible'
-          transition={{ duration: 0.8, delay: 0.6 }}
-        >
-          <BiLogoTypescript 
-            className='cursor-pointer text-[77px] text-sky-500 transition-all duration-300 hover:-translate-y-5
-              sm:text-[100px] md:text-[120px]'
-          />
-        </motion.div>
 
         <motion.div 
           variants={variants}
@@ -78,6 +67,32 @@ const Technologies = () => {
           />
         </motion.div>
 
+        <motion.div 
+          variants={variants}
+          initial='hidden'
+          whileInView='visible'
+          transition={{ duration: 0.8, delay: 0.8 }}
+        >
+          <SiFlutter
+            className='cursor-pointer text-[77px] text-blue-400 transition-all duration-300 hover:-translate-y-5
+              sm:text-[100px] md:text-[120px]'
+          />
+        </motion.div>
+
+        <motion.div 
+          variants={variants}
+          initial='hidden'
+          whileInView='visible'
+          transition={{ duration: 0.8, delay: 0.6 }}
+        >
+          <BiLogoTypescript 
+            className='cursor-pointer text-[77px] text-sky-500 transition-all duration-300 hover:-translate-y-5
+              sm:text-[100px] md:text-[120px]'
+          />
+        </motion.div>
+
+        
+
         
         <motion.div 
           variants={variants}
@@ -91,29 +106,7 @@ const Technologies = () => {
           />
         </motion.div>
 
-        <motion.div 
-          variants={variants}
-          initial='hidden'
-          whileInView='visible'
-          transition={{ duration: 0.8, delay: 1.2 }}
-        >
-          <SiExpress
-            className='cursor-pointer text-[77px] text-gray-600 transition-all duration-300 hover:-translate-y-5
-              sm:text-[100px] md:text-[120px]'
-          />
-        </motion.div>
 
-        <motion.div 
-          variants={variants}
-          initial='hidden'
-          whileInView='visible'
-          transition={{ duration: 0.8, delay: 1.4 }}
-        >
-          <BiLogoMongodb
-            className='cursor-pointer text-[77px] text-green-500 transition-all duration-300 hover:-translate-y-5
-              sm:text-[100px] md:text-[120px]'
-          />
-        </motion.div>
 
         
 

@@ -10,8 +10,17 @@ import nimBG from '../../assets/nimBG.png'
 
 const projectsData: Project[] = [
   {
+    title: 'REDACTED Card Game',
+    description: 'A math based card game that is surprisingly addictive',
+    image: cards,
+    link: 'https://redacted-game.web.app/',
+    repo: 'https://github.com/KuroMaple/redacted_card_game',
+    technologies: ['Flutter'],
+    background: nimBG,
+  },
+  {
     title: 'PokeView',
-    description: 'A Pokedex web app that allows users to view and search for Pokemon.',
+    description: 'A web app to view and search for Pokemon.',
     image: pokeball,
     link: 'https://poke-view.netlify.app',
     repo: 'https://github.com/KuroMaple/Poke-View',
@@ -26,15 +35,6 @@ const projectsData: Project[] = [
     repo: 'https://github.com/KuroMaple/uwbc-web',
     technologies: ['React', 'Django', 'PostgreSQL'],
     background: uwbcwebBG
-  },
-  {
-    title: 'Nim',
-    description: 'A math based card game built with a singleplayer and multiplayer mode.',
-    image: cards,
-    link: 'https://github.com/KuroMaple/nim',
-    repo: 'https://github.com/KuroMaple/nim',
-    technologies: ['React', 'Node.js', 'Express.js', 'MongoDB'],
-    background: nimBG
   },
 ]
 
