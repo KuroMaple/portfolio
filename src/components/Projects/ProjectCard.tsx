@@ -66,7 +66,7 @@ const ProjectCard:React.FC<ProjectCardProps> = (project) => {
         <img
           src={project.background}
           alt={project.title}
-          className='absolute inset-0 w-full h-full object-cover opacity-20' />
+          className='absolute inset-0 w-full h-full object-cover opacity-30' />
         
 
         <div

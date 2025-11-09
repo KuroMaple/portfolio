@@ -38,34 +38,59 @@ const About = () => {
           </h1>
           {/* keep the element in the layout but hide its content so the spacing remains */}
           <h3
-            className='bg-gradient-to-r from-blue-500 to-green-400 bg-clip-text text-transparent opacity-80 text-2xl select-none md:text-3xl invisible'
-            aria-hidden="true"
+            className='bg-gradient-to-r from-blue-500 to-green-400 bg-clip-text text-transparent opacity-80 text-2xl select-none md:text-3xl '
           >
-            Software Developer
+            Game Developer
           </h3>
-          {/* <p>
-            Back in 2015, I discovered&nbsp;
-            <a href='https://create.roblox.com' className='' id='welcome-roblox' target='_blank'>
-              Roblox Studio
-            </a>
-            &nbsp;and set out to create a game that would make me "Robux Rich." 
-            While initially driven by  greed, I quickly became captivated by the process of coding and the ability to bring my most creative and unconventional ideas to life. 
-          </p> */}
+          {/*<p>*/}
+          {/*  Back in 2015, I discovered&nbsp;*/}
+          {/*  <a href='https://create.roblox.com' className='' id='welcome-roblox' target='_blank'>*/}
+          {/*    Roblox Studio*/}
+          {/*  </a>*/}
+          {/*  &nbsp;and set out to create a game that would make me "Robux Rich."*/}
+          {/*  While initially driven by  greed, I quickly became captivated by the process of coding and the ability to bring my most creative and unconventional ideas to life.*/}
+          {/*</p>*/}
+          {/*<p className="md:text-base text-pretty text-sm text-slate-300">*/}
+          {/*  I make experiences people remember. Previously I wrote software for a&nbsp;*/}
+          {/*  <a href="https://www.janacorporation.com" */}
+          {/*    className="bg-gradient-to-r hover:from-green-100 hover:to-green-500 text-transparent bg-clip-text from-green-500 to-green-100" */}
+          {/*    target="_blank">SaaS company</a>,&nbsp;*/}
+          {/*  my&nbsp;*/}
+          {/*  <a href="https://badmintonclub.uwaterloo.ca" */}
+          {/*    className="bg-gradient-to-r hover:from-cyan-100 hover:to-cyan-500 text-transparent bg-clip-text from-cyan-500 to-cyan-100" */}
+          {/*    target="_blank">university badminton club</a> */}
+          {/*  &nbsp;, and my fellow&nbsp;*/}
+          {/*  <a href="https://poke-view.netlify.app" */}
+          {/*    className="bg-gradient-to-r hover:from-red-100 hover:to-red-600 text-transparent bg-clip-text from-red-600 to-red-100" */}
+          {/*    target="_blank">Pokémon fans</a>*/}
+          {/*  &nbsp;.*/}
+          {/*</p>*/}
           <p className="md:text-base text-pretty text-sm text-slate-300">
-            Passionate software developer whose had the privilege of building software for a&nbsp;
-            <a href="https://www.janacorporation.com" 
-              className="bg-gradient-to-r hover:from-green-100 hover:to-green-500 text-transparent bg-clip-text from-green-500 to-green-100" 
-              target="_blank">SaaS company</a>,&nbsp;
+            I’ve built&nbsp;
+            <a href='#projects'
+              className="bg-gradient-to-r hover:from-green-100 hover:to-green-500 text-transparent bg-clip-text from-green-500 to-green-100"
+            >
+              multiple games
+            </a>,&nbsp;and am currently developing a new title in Unreal Engine.
+          </p>
+
+          <p>
+            My experience includes writing software for&nbsp;
+            <a href="https://www.linkedin.com/in/hassan-hashmi/"
+              className="bg-gradient-to-r hover:from-green-100 hover:to-yellow-500 text-transparent bg-clip-text from-yellow-500 to-yellow-100"
+              target="_blank">SaaS companies
+            </a>,&nbsp;
             my&nbsp;
-            <a href="https://badmintonclub.uwaterloo.ca" 
-              className="bg-gradient-to-r hover:from-cyan-100 hover:to-cyan-500 text-transparent bg-clip-text from-cyan-500 to-cyan-100" 
-              target="_blank">university badminton club</a> 
+            <a href="https://badmintonclub.uwaterloo.ca"
+              className="bg-gradient-to-r hover:from-cyan-100 hover:to-cyan-500 text-transparent bg-clip-text from-cyan-500 to-cyan-100"
+              target="_blank">university badminton club</a>
             &nbsp;, and my fellow&nbsp;
-            <a href="https://poke-view.netlify.app" 
-              className="bg-gradient-to-r hover:from-red-100 hover:to-red-600 text-transparent bg-clip-text from-red-600 to-red-100" 
+            <a href="https://poke-view.netlify.app"
+              className="bg-gradient-to-r hover:from-red-100 hover:to-red-600 text-transparent bg-clip-text from-red-600 to-red-100"
               target="_blank">Pokémon fans</a>
             &nbsp;.
           </p>
+
         </motion.div>
       </div>
 

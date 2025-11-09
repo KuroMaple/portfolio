@@ -1,14 +1,25 @@
 import badminton from '../../assets/badmintonIcon.png'
 import pokeball from '../../assets/pokeballIcon.png'
 import cards from '../../assets//card-games-icon.png'
+import pong from '../../assets/pong.png';
 import { motion } from 'motion/react'
 import ProjectCard, { Project, ScrollReveal } from './ProjectCard'
 import { useState } from 'react'
 import pokeViewBG from '../../assets/pokeviewBG.png'
 import uwbcwebBG from '../../assets/uwbcwebBG.png'
 import nimBG from '../../assets/nimBG.png'
+import cPlusPong from '../../assets/cPlusPong2.png'
 
 const projectsData: Project[] = [
+  {
+    title: 'CPlusPong',
+    description: 'The game Pong made entirely with C++',
+    image: pong,
+    link: 'https://github.com/KuroMaple/CPlusPong',
+    repo: 'https://github.com/KuroMaple/CPlusPong',
+    technologies: ['C++'],
+    background: cPlusPong,
+  },
   {
     title: 'REDACTED Card Game',
     description: 'A math based card game that is surprisingly addictive',
