@@ -1,4 +1,4 @@
-import headshot from '../../assets/facePic.png'
+import headshot from '../../assets/facePic.jpg'
 import { motion } from 'motion/react'
 
 const About = () => {
