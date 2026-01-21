@@ -40,7 +40,7 @@ const About = () => {
           <h3
             className='bg-gradient-to-r from-blue-500 to-green-400 bg-clip-text text-transparent opacity-80 text-2xl select-none md:text-3xl '
           >
-            Game Developer
+            Software Developer
           </h3>
           {/*<p>*/}
           {/*  Back in 2015, I discovered&nbsp;*/}
@@ -65,30 +65,32 @@ const About = () => {
           {/*    target="_blank">Pokémon fans</a>*/}
           {/*  &nbsp;.*/}
           {/*</p>*/}
-          <p className="md:text-base text-pretty text-sm text-slate-300">
+          {/* <p className="md:text-base text-pretty text-sm text-slate-300">
             I’ve built&nbsp;
             <a href='#projects'
               className="bg-gradient-to-r hover:from-green-100 hover:to-green-500 text-transparent bg-clip-text from-green-500 to-green-100"
             >
               multiple games
             </a>,&nbsp;and am currently developing a new title in Unreal Engine.
-          </p>
+          </p> */}
 
           <p>
-            My experience includes writing software for&nbsp;
-            <a href="https://www.linkedin.com/in/hassan-hashmi/"
+            I write software for&nbsp;
+            <a href="https://www.linkedin.com/in/hassan-hashmi/#"
               className="bg-gradient-to-r hover:from-green-100 hover:to-yellow-500 text-transparent bg-clip-text from-yellow-500 to-yellow-100"
-              target="_blank">SaaS companies
-            </a>,&nbsp;
-            my&nbsp;
+              target="_blank">SaaS companies by day 
+            </a> 
+            {/* my&nbsp;
             <a href="https://badmintonclub.uwaterloo.ca"
               className="bg-gradient-to-r hover:from-cyan-100 hover:to-cyan-500 text-transparent bg-clip-text from-cyan-500 to-cyan-100"
-              target="_blank">university badminton club</a>
-            &nbsp;, and my fellow&nbsp;
-            <a href="https://poke-view.netlify.app"
+              target="_blank">university badminton club
+            </a> */}
+            &nbsp;and make&nbsp;
+            <a href='#projects'
               className="bg-gradient-to-r hover:from-red-100 hover:to-red-600 text-transparent bg-clip-text from-red-600 to-red-100"
-              target="_blank">Pokémon fans</a>
-            &nbsp;.
+            >
+              games by night
+            </a>.
           </p>
 
         </motion.div>
