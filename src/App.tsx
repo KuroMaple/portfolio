@@ -1,5 +1,5 @@
 import About from './components/About/About'
-import Contact from './components/Contact/Contact'
+import Landing from './components/Landing/Landing'
 import NavBar from './components/NavBar/NavBar'
 import Projects from './components/Projects/Projects'
 import Technologies from './components/Technogies/Technologies'
@@ -14,10 +14,10 @@ function App() {
         className='flex flex-col items-center px-4 md:px-8 lg:px-16 text-[#f8fcef]'
       >
         <NavBar />
-        <About />
+        <Landing />
         <Technologies />
         <Projects />
-        <Contact />
+        <About />
       </main>
     </>
   )

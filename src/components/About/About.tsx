@@ -1,100 +1,43 @@
-import headshot from '../../assets/facePic.jpg'
 import { motion } from 'motion/react'
+
+import avatar from '../../assets/avatar.png'
 
 const About = () => {
   return (
-    <div 
+    <div
       id='about'
-      className='px-16 flex min-h-screen w-full items-center justify-center py-28 md:px-32'  
+      className='px-16 flex min-h-screen w-full items-center justify-center py-28 md:px-12 flex-col'
     >
-      
-      <div
-        className='flex flex-col items-center justify-center gap-10 text-[#f8fcef]'
+      <motion.div
+        className='flex flex-col md:flex-row items-center justify-center text-[#f8fcef]
+          bg-black/30 backdrop-blur-sm rounded-2xl border border-white/10 overflow-hidden'
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
       >
-        <a href='#contact'>
-          <motion.div
-            initial={{ opacity: 0, x: 100 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            <img 
-              src={headshot} 
-              className='w-[300px] cursor-pointer rounded-full shadow-xl 
-          shadow-emerald-800 transition-all duration-300 hover:-translate-y-5 
-          hover:scale-105 hover:shadow-2xl hover:shadow-cyan-600 md:w-[350px] select-none'  
-            />
-          </motion.div>
-        </a>
-        <motion.div 
-          className='flex max-w-[600px] flex-col items-center justify-center gap-3 text-center'
-          initial={{ opacity: 0, x: -100 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }} 
+        <div
+          className='flex flex-col items-center md:items-start justify-center gap-3 text-center md:text-left
+            p-8 md:p-12 w-full md:w-[70%]'
         >
-          <h1
-            className='bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent opacity-80 text-5xl select-none font-light md:text-7xl'
-          >
-            Hassan Hashmi
-          </h1>
-          {/* keep the element in the layout but hide its content so the spacing remains */}
+          
           <h3
-            className='bg-gradient-to-r from-blue-500 to-green-400 bg-clip-text text-transparent opacity-80 text-2xl select-none md:text-3xl '
+            className='bg-gradient-to-r from-amber-200 to-emerald-300 bg-clip-text text-transparent opacity-90 text-2xl select-none md:text-3xl'
           >
             Software Developer
           </h3>
-          {/*<p>*/}
-          {/*  Back in 2015, I discovered&nbsp;*/}
-          {/*  <a href='https://create.roblox.com' className='' id='welcome-roblox' target='_blank'>*/}
-          {/*    Roblox Studio*/}
-          {/*  </a>*/}
-          {/*  &nbsp;and set out to create a game that would make me "Robux Rich."*/}
-          {/*  While initially driven by  greed, I quickly became captivated by the process of coding and the ability to bring my most creative and unconventional ideas to life.*/}
-          {/*</p>*/}
-          {/*<p className="md:text-base text-pretty text-sm text-slate-300">*/}
-          {/*  I make experiences people remember. Previously I wrote software for a&nbsp;*/}
-          {/*  <a href="https://www.janacorporation.com" */}
-          {/*    className="bg-gradient-to-r hover:from-green-100 hover:to-green-500 text-transparent bg-clip-text from-green-500 to-green-100" */}
-          {/*    target="_blank">SaaS company</a>,&nbsp;*/}
-          {/*  my&nbsp;*/}
-          {/*  <a href="https://badmintonclub.uwaterloo.ca" */}
-          {/*    className="bg-gradient-to-r hover:from-cyan-100 hover:to-cyan-500 text-transparent bg-clip-text from-cyan-500 to-cyan-100" */}
-          {/*    target="_blank">university badminton club</a> */}
-          {/*  &nbsp;, and my fellow&nbsp;*/}
-          {/*  <a href="https://poke-view.netlify.app" */}
-          {/*    className="bg-gradient-to-r hover:from-red-100 hover:to-red-600 text-transparent bg-clip-text from-red-600 to-red-100" */}
-          {/*    target="_blank">Pokémon fans</a>*/}
-          {/*  &nbsp;.*/}
-          {/*</p>*/}
-          {/* <p className="md:text-base text-pretty text-sm text-slate-300">
-            I’ve built&nbsp;
-            <a href='#projects'
-              className="bg-gradient-to-r hover:from-green-100 hover:to-green-500 text-transparent bg-clip-text from-green-500 to-green-100"
-            >
-              multiple games
-            </a>,&nbsp;and am currently developing a new title in Unreal Engine.
-          </p> */}
 
-          <p>
-            I write software for&nbsp;
-            <a href="https://www.linkedin.com/in/hassan-hashmi/#"
-              className="bg-gradient-to-r hover:from-green-100 hover:to-yellow-500 text-transparent bg-clip-text from-yellow-500 to-yellow-100"
-              target="_blank">SaaS companies by day 
-            </a> 
-            {/* my&nbsp;
-            <a href="https://badmintonclub.uwaterloo.ca"
-              className="bg-gradient-to-r hover:from-cyan-100 hover:to-cyan-500 text-transparent bg-clip-text from-cyan-500 to-cyan-100"
-              target="_blank">university badminton club
-            </a> */}
-            &nbsp;and make&nbsp;
-            <a href='#projects'
-              className="bg-gradient-to-r hover:from-red-100 hover:to-red-600 text-transparent bg-clip-text from-red-600 to-red-100"
-            >
-              games by night
-            </a>.
-          </p>
+        </div>
 
-        </motion.div>
-      </div>
+        <div className='w-full flex items-center justify-center p-6 md:p-1'>
+          <img
+            src={avatar}
+            alt="Avatar"
+            className='w-[180px] md:w-full max-w-[220px] rounded-2xl object-cover
+              transition-all duration-300 hover:-translate-y-3
+              shadow-[0_0_30px_rgba(34,197,94,0.3)] hover:shadow-[0_0_50px_rgba(34,197,94,0.5)]'
+          />
+        </div>
+      </motion.div>
 
     </div>
   )

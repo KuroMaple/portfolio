@@ -2,13 +2,15 @@ import { useEffect, useRef, useState } from 'react'
 import { BiMenu, BiX } from 'react-icons/bi'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { TbFileCv } from 'react-icons/tb'
+import logo from '../../assets/logo.png'
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false)
-  const prevWidth = useRef(window.innerWidth) 
+  const [onLanding, setOnLanding] = useState(true)
+  const prevWidth = useRef(window.innerWidth)
 
   useEffect(() => {
-    const handleResize = () => { 
+    const handleResize = () => {
       const currentWidth = window.innerWidth
 
       if (prevWidth.current < 768 && currentWidth >= 768) {
@@ -16,11 +18,23 @@ const NavBar = () => {
       }
       prevWidth.current = currentWidth
     }
-    
+
     window.addEventListener('resize', handleResize)
     return () => {
       window.removeEventListener('resize', handleResize)
     }
+  }, [])
+
+  useEffect(() => {
+    const landingEl = document.getElementById('landing')
+    if (!landingEl) return
+
+    const observer = new IntersectionObserver(
+      ([entry]) => setOnLanding(entry.isIntersecting),
+      { threshold: 0.3 }
+    )
+    observer.observe(landingEl)
+    return () => observer.disconnect()
   }, [])
   
   const toggleMenu = () => {
@@ -32,20 +46,18 @@ const NavBar = () => {
       className='fixed top-0 z-10 w-full flex items-center justify-between
       border-b border-b-[#f8fcef]  px-16 py-6 text-[#f8fcef] backdrop-blur-md md:justify-evenly'
     >
-      <a 
-        href='#about' 
-        className='bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent opacity-80 text-3xl font-semibold transition-all duration-300 hover:opacity-100 select-none'>
-        HH
+      <a
+        href='#landing'
+        className='opacity-80 transition-all duration-300 hover:opacity-100 select-none'>
+        <img
+          src={logo}
+          alt="Logo"
+          className={`h-15 w-auto ${!onLanding ? 'animate-bounce-subtle' : ''}`}
+        />
       </a>
       <ul
         className='hidden md:flex gap-10'
       >
-        <a
-          href='#about'
-          className='cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100 hover:text-emerald-400'
-        >
-          <li>About</li>
-        </a>
         <a
           href='#technologies'
           className='cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100 hover:text-teal-400'
@@ -58,11 +70,11 @@ const NavBar = () => {
         >
           <li>Projects</li>
         </a>
-        <a
-          href='#contact'
-          className='cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100 hover:text-sky-500'
+         <a
+          href='#about'
+          className='cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100 hover:text-emerald-400'
         >
-          <li>Contact</li>
+          <li>About</li>
         </a>
       </ul>
 
@@ -107,13 +119,6 @@ const NavBar = () => {
             className='flex flex-col gap-9'
           >
             <a
-              href='#about'
-              className='cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100 hover:text-emerald-400'
-              onClick={toggleMenu}
-            >
-              <li>About</li>
-            </a>
-            <a
               href='#technologies'
               className='cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100 hover:text-teal-400'
               onClick={toggleMenu}
@@ -128,11 +133,11 @@ const NavBar = () => {
               <li>Projects</li>
             </a>
             <a
-              href='#contact'
-              className='cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100 hover:text-sky-500'
+              href='#about'
+              className='cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100 hover:text-emerald-400'
               onClick={toggleMenu}
             >
-              <li>Contact</li>
+              <li>About</li>
             </a>
           </ul>
 
