@@ -60,13 +60,13 @@ const Projects = () => {
     >
       <ScrollReveal>
         <h1
-          className='text-4xl font-light text-white md:text-6xl pb-8'
+          className='text-4xl font-light text-[#f8fcef] md:text-6xl pb-8'
         >
         Projects
         </h1>
       
         <div
-          className={`flex flex-wrap w-full gap-10 text-white flex-col lg:flex-row`}
+          className={`flex flex-wrap w-full gap-10 text-[#f8fcef] flex-col lg:flex-row`}
         >
           {
             projectsData.map((project, index) => (

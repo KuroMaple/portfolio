@@ -9,7 +9,7 @@ const About = () => {
     >
       
       <div
-        className='flex flex-col items-center justify-center gap-10 text-white'
+        className='flex flex-col items-center justify-center gap-10 text-[#f8fcef]'
       >
         <a href='#contact'>
           <motion.div

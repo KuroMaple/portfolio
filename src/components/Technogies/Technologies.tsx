@@ -23,7 +23,7 @@ const Technologies = () => {
         initial='hidden'
         whileInView='visible'
         transition={{ duration: 0.8, delay: 0.2 }}
-        className='text-4xl font-light text-white md:text-6xl'
+        className='text-4xl font-light text-[#f8fcef] md:text-6xl'
       >
         Technologies
       </motion.h1>

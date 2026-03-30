@@ -59,7 +59,7 @@ const ProjectCard:React.FC<ProjectCardProps> = (project) => {
         {
           project.title === project.selectedProject.title &&
           <FiExternalLink 
-            className='absolute top-2 right-2 text-3xl text-white'
+            className='absolute top-2 right-2 text-3xl text-[#f8fcef]'
           />
         }
         
@@ -96,7 +96,7 @@ const ProjectCard:React.FC<ProjectCardProps> = (project) => {
             {/* Description below the row */}
             {project.title === project.selectedProject.title && (
               <div className="flex mt-3 justify-center"> {/* Add some top margin */}
-                <p className="text-white text-sm font-semibold">
+                <p className="text-[#f8fcef] text-sm font-semibold">
                   {project.description}
                 </p>
               

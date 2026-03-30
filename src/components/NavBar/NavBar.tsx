@@ -30,7 +30,7 @@ const NavBar = () => {
   return (
     <nav
       className='fixed top-0 z-10 w-full flex items-center justify-between
-      border-b border-b-slate-100  px-16 py-6 text-slate-100 backdrop-blur-md md:justify-evenly'
+      border-b border-b-[#f8fcef]  px-16 py-6 text-[#f8fcef] backdrop-blur-md md:justify-evenly'
     >
       <a 
         href='#about' 

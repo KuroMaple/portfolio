@@ -25,7 +25,7 @@ const Contact = () => {
         <a
           href='mailto:hashmihassan47@gmail.com'
           className='text-nowrap rounded-lg border border-sky-700 bg-slate-950 px-5 py-3 text-lg 
-            font-bold text-white shadow-lg shadow-emerald-600 hover:shadow-xl hover:bg-sky-700 transition-all duration-300 hover:-translate-y-2'
+            font-bold text-[#f8fcef] shadow-lg shadow-emerald-600 hover:shadow-xl hover:bg-sky-700 transition-all duration-300 hover:-translate-y-2'
         >Contact Me</a>
       </div>
     </div>
