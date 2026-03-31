@@ -12,22 +12,22 @@ const Landing = () => {
         transition={{ duration: 0.8 }}
         className='text-center'
       >
-        <span className='opacity-90 text-3xl sm:text-5xl select-none font-semibold md:text-6xl text-[#f8fcef]'>
+        <span className='opacity-90 text-2xl sm:text-4xl select-none font-semibold md:text-6xl text-[#f8fcef]'>
           Hi, I'm Hassan Hashmi
         </span>
       </motion.h1>
 
       <motion.p
-        className='text-xs md:text-sm text-[#f8fcef] select-none italic tracking-widest'
+        className='text-sm sm:text-base md:text-lg text-[#f8fcef] select-none italic tracking-widest'
         initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 0.45, y: 0 }}
+        animate={{ opacity: 0.6, y: 0 }}
         transition={{ duration: 0.8, delay: 0.15 }}
       >
         aka KuroMaple
       </motion.p>
 
       <motion.p
-        className='text-[#f8fcef] text-lg md:text-xl mt-4 text-center'
+        className='text-[#f8fcef] text-base sm:text-lg md:text-xl mt-4 text-center'
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 0.85, y: 0 }}
         transition={{ duration: 0.8, delay: 0.3 }}
@@ -44,7 +44,7 @@ const Landing = () => {
         <a
           href='#experience'
           className='text-nowrap rounded-lg border border-emerald-400/50 bg-black/30 backdrop-blur-sm
-            px-6 py-3 text-lg font-semibold text-[#f8fcef]
+            px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base md:text-lg font-semibold text-[#f8fcef]
             shadow-[0_0_15px_rgba(52,211,153,0.15)] hover:shadow-[0_0_25px_rgba(52,211,153,0.35)]
             hover:border-emerald-400 hover:bg-black/40
             transition-all duration-300 hover:-translate-y-1'
@@ -54,7 +54,7 @@ const Landing = () => {
         <a
           href='#projects'
           className='text-nowrap rounded-lg border border-emerald-400/50 bg-black/30 backdrop-blur-sm
-            px-6 py-3 text-lg font-semibold text-[#f8fcef]
+            px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base md:text-lg font-semibold text-[#f8fcef]
             shadow-[0_0_15px_rgba(52,211,153,0.15)] hover:shadow-[0_0_25px_rgba(52,211,153,0.35)]
             hover:border-emerald-400 hover:bg-black/40
             transition-all duration-300 hover:-translate-y-1'
@@ -64,7 +64,7 @@ const Landing = () => {
         <a
           href='#about'
           className='text-nowrap rounded-lg border border-emerald-400/50 bg-black/30 backdrop-blur-sm
-            px-6 py-3 text-lg font-semibold text-[#f8fcef]
+            px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base md:text-lg font-semibold text-[#f8fcef]
             shadow-[0_0_15px_rgba(52,211,153,0.15)] hover:shadow-[0_0_25px_rgba(52,211,153,0.35)]
             hover:border-emerald-400 hover:bg-black/40
             transition-all duration-300 hover:-translate-y-1'

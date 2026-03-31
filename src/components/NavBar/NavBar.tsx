@@ -44,7 +44,7 @@ const NavBar = () => {
   return (
     <nav
       className='fixed top-0 z-10 w-full flex items-center justify-between
-      border-b border-b-[#f8fcef]  px-16 py-6 text-[#f8fcef] backdrop-blur-md md:justify-evenly'
+      border-b border-b-[#f8fcef] px-4 sm:px-8 md:px-16 py-4 md:py-6 text-[#f8fcef] backdrop-blur-md md:justify-evenly'
     >
       <a
         href='#landing'
@@ -112,8 +112,8 @@ const NavBar = () => {
 
       {isOpen && (
         <div
-          className={`fixed right-0 top-[85px] flex h-screen w-1/2 flex-col items-start justify-start gap-10 border-1 
-            border-slate-100 backdrop-blur-md p-12 ${isOpen ? 'block' : 'hidden'} bg-slate-950/75`}
+          className={`fixed right-0 top-[70px] flex h-screen w-3/4 sm:w-1/2 flex-col items-start justify-start gap-6 border-1
+            border-slate-100 backdrop-blur-md p-6 sm:p-12 ${isOpen ? 'block' : 'hidden'} bg-slate-950/75`}
         >
           <ul
             className='flex flex-col gap-9'

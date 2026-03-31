@@ -59,9 +59,9 @@ const Projects = () => {
   return (
     <div
       id='projects'
-      className='flex min-h-screen w-full flex-col items-center justify-center gap-12 p-4 md:px-14 md:py-24 scroll-mt-20'
+      className='flex min-h-screen w-full flex-col items-center justify-center gap-8 sm:gap-12 px-4 py-16 md:px-14 md:py-24 scroll-mt-20'
     >
-      <h1 className="text-4xl font-light text-[#f8fcef] md:text-6xl">
+      <h1 className="text-3xl sm:text-4xl font-light text-[#f8fcef] md:text-6xl">
         Projects
       </h1>
 
@@ -90,9 +90,9 @@ const Projects = () => {
           </div>
 
           {/* Info overlay */}
-          <div className="p-6">
+          <div className="p-4 sm:p-6">
             <div className="flex items-center justify-between mb-2">
-              <h3 className="text-xl font-semibold">Raven Rally — Unreal Engine</h3>
+              <h3 className="text-lg sm:text-xl font-semibold">Raven Rally — Unreal Engine</h3>
               <span className="rounded-full bg-emerald-400/20 border border-emerald-400/40 px-3 py-1 text-xs text-emerald-300">
                 Featured
               </span>
@@ -107,7 +107,7 @@ const Projects = () => {
       </motion.div>
 
       {/* Project grid */}
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-3xl auto-rows-fr'>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 w-full max-w-3xl auto-rows-fr'>
         {projectsData.map((project, index) => (
           <motion.div
             key={project.title}

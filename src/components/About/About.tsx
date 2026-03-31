@@ -19,7 +19,7 @@ const About = () => {
   return (
     <div
       id='about'
-      className='px-6 flex min-h-screen w-full items-center justify-center py-28 md:px-12 flex-col gap-8 scroll-mt-20'
+      className='px-4 sm:px-6 flex min-h-screen w-full items-center justify-center py-16 md:py-28 md:px-12 flex-col gap-6 sm:gap-8 scroll-mt-20'
     >
       {/* Main card: avatar + intro */}
       <motion.div
@@ -30,9 +30,9 @@ const About = () => {
         transition={{ duration: 0.8, delay: 0.2 }}
       >
         {/* Top row: heading + avatar */}
-        <div className='flex items-center justify-between p-8 md:px-12 md:pt-10 md:pb-4'>
+        <div className='flex items-center justify-between p-6 sm:p-8 md:px-12 md:pt-10 md:pb-4'>
           <h3
-            className='bg-gradient-to-r from-amber-200 to-emerald-300 bg-clip-text text-transparent opacity-90 text-2xl select-none md:text-3xl'
+            className='bg-gradient-to-r from-amber-200 to-emerald-300 bg-clip-text text-transparent opacity-90 text-xl sm:text-2xl select-none md:text-3xl'
           >
             About me
           </h3>
@@ -40,7 +40,7 @@ const About = () => {
         </div>
 
         {/* Body text + contact */}
-        <div className='flex flex-col gap-4 px-8 pb-8 md:px-12 md:pb-10'>
+        <div className='flex flex-col gap-3 sm:gap-4 px-6 pb-6 sm:px-8 sm:pb-8 md:px-12 md:pb-10'>
           <p className='text-sm md:text-base opacity-80 leading-relaxed'>
             Growing up, games shaped the way I think about problem solving
             and led me to pursue a Computer Science degree at the University of Waterloo.
@@ -58,7 +58,7 @@ const About = () => {
 
           {/* Contact links */}
           <div
-            className='flex items-center justify-center gap-8 mt-2'
+            className='flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mt-2'
           >
           <div className='flex flex-col gap-3'>
             <a

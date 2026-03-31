@@ -41,16 +41,16 @@ const ProjectCard: React.FC<Project> = ({
         className="absolute inset-0 w-full h-full object-cover opacity-15 pointer-events-none"
       />
 
-      <div className="relative z-10 p-6 flex flex-col gap-4">
+      <div className="relative z-10 p-4 sm:p-6 flex flex-col gap-3 sm:gap-4">
         {/* Header: icon + title + links */}
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
             <img
               src={image}
               alt={title}
-              className="w-[40px] h-[40px] object-contain rounded-lg"
+              className="w-[32px] h-[32px] sm:w-[40px] sm:h-[40px] object-contain rounded-lg"
             />
-            <h3 className="text-xl font-semibold">{title}</h3>
+            <h3 className="text-lg sm:text-xl font-semibold">{title}</h3>
           </div>
           <div className="flex items-center gap-3">
             <a

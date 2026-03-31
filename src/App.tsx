@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-      <div className="fixed -z-10 min-h-screen w-full bg-cover bg-center bg-no-repeat bg-fixed" style={{ backgroundImage: `url(${forestBg})` }}></div>
+      <div className="fixed -z-10 min-h-screen w-full bg-cover bg-center bg-no-repeat md:bg-fixed" style={{ backgroundImage: `url(${forestBg})` }}></div>
       <main
         className='flex flex-col items-center px-4 md:px-8 lg:px-16 text-[#f8fcef]'
       >
