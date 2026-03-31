@@ -22,9 +22,10 @@ const experiences: ExperienceEntry[] = [
     periods: ['Jul 2025 - Present'],
     techIcons: [
       <img key="CSharp" src={cSharpIcon} alt="C#" className="w-8 h-8 object-contain" />,
+      <img key="cpp" src={cPlusPlusIcon} alt="C++" className="w-8 h-8 object-contain" />,
       <FaVuejs key="vue" className="text-3xl text-green-400" />,
       <SiFlutter key="flutter" className="text-3xl text-blue-400" />,
-      <img key="cpp" src={cPlusPlusIcon} alt="C++" className="w-8 h-8 object-contain" />,
+      
     ],
   },
   {

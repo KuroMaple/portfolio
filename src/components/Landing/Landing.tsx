@@ -43,7 +43,7 @@ const Landing = () => {
       >
         <a
           href='#projects'
-          className='animate-pulse-glow text-nowrap rounded-lg border border-emerald-400/50 bg-black/30 backdrop-blur-sm
+          className='animate-green-pulse text-nowrap rounded-lg border border-emerald-400/50 bg-black/30 backdrop-blur-sm
             px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base md:text-lg font-semibold text-[#f8fcef]
             shadow-[0_0_15px_rgba(52,211,153,0.15)] hover:shadow-[0_0_25px_rgba(52,211,153,0.35)]
             hover:border-emerald-400 hover:bg-black/40

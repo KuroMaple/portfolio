@@ -1,14 +1,26 @@
+@font-face {
+  font-family: 'Beaufort Bold';
+  src: url('/fonts/BeaufortforLOL-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
 @import "tailwindcss";
 
 @theme {
-  --animate-pulse-glow: pulse-glow 2s ease-in-out infinite;
+  --animate-green-pulse: green-pulse 2s ease-in-out infinite;
   --animate-bounce-subtle: bounce-subtle 2s ease-in-out infinite;
- 
+  --animate-gold-glow: gold-glow 3s ease-in-out infinite;
 }
 
-@keyframes pulse-glow {
+@keyframes green-pulse {
   0%, 100% { background-color: rgba(0, 0, 0, 0.3); }
   50% { background-color: #6AF170; }
+}
+
+@keyframes gold-glow {
+  0%, 100% { box-shadow: 0 0 15px rgba(200, 170, 110, 0.3); }
+  50% { box-shadow: 0 0 25px rgba(200, 170, 110, 0.6); }
 }
 
 
@@ -20,7 +32,11 @@
 * {
   font-family: 'Montserrat', sans-serif;
   scroll-behavior: smooth;
+}
 
+.font-beaufort,
+.font-beaufort * {
+  font-family: 'Beaufort Bold', sans-serif !important;
 }
 
 *::-webkit-scrollbar {
