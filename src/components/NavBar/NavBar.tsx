@@ -64,27 +64,62 @@ const NavBar = () => {
         bg-gradient-to-t from-[#4989A2] to-[#0a1428]/77
         border-b border-b-[#c8aa6e]/50'
     >
-      {/* Left zone — Logo + HOME fused button */}
+      {/* Left zone — Logo + HOME pentagon button */}
       <a
         href='#landing'
-        className='relative flex items-center select-none group pt-2 pb-3'
+        className={`relative flex items-center select-none group
+          transition-all duration-300 active:scale-95 active:brightness-75
+          ${onLanding ? 'opacity-50' : 'opacity-100'}`}
       >
-
-        <div className={`flex items-center border border-[#c8aa6e]/60 rounded-lg overflow-hidden
+        {/* Outer faded rectangle */}
+        <div className='bg-[#0a1e2e]/40 px-1 py-1 rounded-sm flex'>
+          <div className={`flex items-center border border-[#c8aa6e]/60 overflow-hidden
           bg-[#010a13] transition-all duration-300 hover:border-[#c8aa6e] hover:bg-[#0a1428]
-          active:scale-95 active:brightness-75 ${onLanding ? 'opacity-50' : 'opacity-100 shadow-[0_0_15px_rgba(200,170,110,0.3)] hover:shadow-[0_0_25px_rgba(200,170,110,0.6)] animate-gold-glow'}`}>
-          <div className='px-2 py-1.5'>
+          active:scale-95 active:brightness-75 
+          ${onLanding ? 'opacity-50' : 'opacity-100 shadow-[0_0_15px_rgba(200,170,110,0.3)] hover:shadow-[0_0_25px_rgba(200,170,110,0.6)] animate-gold-glow'}`}>
+            <div className='px-2 py-1.5'>
             <img
               src={logo}
               alt="Logo"
               className='h-8 sm:h-10 w-auto'
             />
           </div>
-          <span className='px-3 py-1.5 text-lg sm:text-xl font-semibold tracking-wider
-            text-[#c8aa6e] group-hover:text-[#e8d5a3] transition-colors duration-300 uppercase'>
-            Home
-          </span>
+          {/* Pentagon border layer */}
+            <div
+              className='bg-[#1e9de0] p-[2px] transition-all duration-300 group-hover:bg-[#3dbdf0]'
+              style={{ clipPath: 'polygon(0% 0%, 85% 0%, 100% 50%, 85% 100%, 0% 100%)' }}
+            >
+              {/* Pentagon inner fill */}
+              <div
+                className='bg-[#010a13] flex items-center transition-all duration-300 group-hover:bg-[#0a1428]'
+                style={{ clipPath: 'polygon(0% 0%, 85% 0%, 100% 50%, 85% 100%, 0% 100%)' }}
+              >
+                <span className='px-4 pr-8 py-1.5 text-lg sm:text-xl font-semibold tracking-wider
+                  text-[#f8fcef] group-hover:text-white transition-colors duration-300 uppercase'>
+                  Home
+                </span>
+              </div>
+            </div> 
+            {/* Pentagon border layer */}
+            <div
+              className='bg-[#1e9de0] p-[2px] transition-all duration-300 group-hover:bg-[#3dbdf0]'
+              style={{ clipPath: 'polygon(0% 0%, 85% 0%, 100% 50%, 85% 100%, 0% 100%)' }}
+            >
+              {/* Pentagon inner fill */}
+              <div
+                className='bg-[#010a13] flex items-center transition-all duration-300 group-hover:bg-[#0a1428]'
+                style={{ clipPath: 'polygon(0% 0%, 85% 0%, 100% 50%, 85% 100%, 0% 100%)' }}
+              >
+                <span className='px-4 pr-8 py-1.5 text-lg sm:text-xl font-semibold tracking-wider
+                  text-[#f8fcef] group-hover:text-white transition-colors duration-300 uppercase'>
+                  Home
+                </span>
+              </div>
+            </div> 
         </div>
+        </div>
+
+        
       </a>
 
       {/* Center zone — Navigation tabs */}
