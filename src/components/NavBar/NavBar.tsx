@@ -71,55 +71,63 @@ const NavBar = () => {
           transition-all duration-300 active:scale-95 active:brightness-75
           ${onLanding ? 'opacity-50' : 'opacity-100'}`}
       >
-        {/* Outer faded rectangle */}
-        <div className='bg-[#0a1e2e]/40 px-1 py-1 rounded-sm flex'>
-          <div className={`flex items-center border border-[#c8aa6e]/60 overflow-hidden
+        {/* Button container — logo + pentagon */}
+        <div className={`flex items-center border border-[#c8aa6e]/60 overflow-hidden rounded-l-full
           bg-[#010a13] transition-all duration-300 hover:border-[#c8aa6e] hover:bg-[#0a1428]
-          active:scale-95 active:brightness-75 
+          active:scale-95 active:brightness-75
           ${onLanding ? 'opacity-50' : 'opacity-100 shadow-[0_0_15px_rgba(200,170,110,0.3)] hover:shadow-[0_0_25px_rgba(200,170,110,0.6)] animate-gold-glow'}`}>
-            <div className='px-2 py-1.5'>
+
+          {/* Logo */}
+          <div className='pl-0.25 pr-0 py-0.25 relative z-10'>
             <img
               src={logo}
               alt="Logo"
               className='h-8 sm:h-10 w-auto'
             />
           </div>
-          {/* Pentagon border layer */}
-            <div
-              className='bg-[#1e9de0] p-[2px] transition-all duration-300 group-hover:bg-[#3dbdf0]'
-              style={{ clipPath: 'polygon(0% 0%, 85% 0%, 100% 50%, 85% 100%, 0% 100%)' }}
-            >
-              {/* Pentagon inner fill */}
-              <div
-                className='bg-[#010a13] flex items-center transition-all duration-300 group-hover:bg-[#0a1428]'
-                style={{ clipPath: 'polygon(0% 0%, 85% 0%, 100% 50%, 85% 100%, 0% 100%)' }}
-              >
-                <span className='px-4 pr-8 py-1.5 text-lg sm:text-xl font-semibold tracking-wider
-                  text-[#f8fcef] group-hover:text-white transition-colors duration-300 uppercase'>
-                  Home
-                </span>
-              </div>
-            </div> 
-            {/* Pentagon border layer */}
-            <div
-              className='bg-[#1e9de0] p-[2px] transition-all duration-300 group-hover:bg-[#3dbdf0]'
-              style={{ clipPath: 'polygon(0% 0%, 85% 0%, 100% 50%, 85% 100%, 0% 100%)' }}
-            >
-              {/* Pentagon inner fill */}
-              <div
-                className='bg-[#010a13] flex items-center transition-all duration-300 group-hover:bg-[#0a1428]'
-                style={{ clipPath: 'polygon(0% 0%, 85% 0%, 100% 50%, 85% 100%, 0% 100%)' }}
-              >
-                <span className='px-4 pr-8 py-1.5 text-lg sm:text-xl font-semibold tracking-wider
-                  text-[#f8fcef] group-hover:text-white transition-colors duration-300 uppercase'>
-                  Home
-                </span>
-              </div>
-            </div> 
-        </div>
-        </div>
 
-        
+          {/* Pentagon border layer — concave left edge */}
+          <div
+            className='relative -ml-2 bg-[#1e9de0] p-[2px] transition-all duration-300 group-hover:bg-[#3dbdf0]'
+            style={{ clipPath: 'polygon(0% 0%, 85% 0%, 100% 50%, 85% 100%, 0% 100%)' }}
+          >
+            {/* Concave left edge overlay */}
+            <div
+              className='absolute left-0 top-0 h-full w-3 bg-[#010a13] transition-all duration-300 group-hover:bg-[#0a1428]'
+              style={{ borderRadius: '0 50% 50% 0' }}
+            />
+            {/* Pentagon inner fill */}
+            <div
+              className='relative bg-[#010a13] flex items-center transition-all duration-300 group-hover:bg-[#0a1428] ml-2.5'
+              style={{ clipPath: 'polygon(0% 0%, 85% 0%, 100% 50%, 85% 100%, 0% 100%)' }}
+            >
+              {/* Concave left edge overlay (inner) */}
+              <div
+                className='absolute left-0 top-0 h-full w-0.25 bg-[#1e9de0] transition-all duration-300 group-hover:bg-[#3dbdf0]'
+                style={{ borderRadius: '0 50% 50% 0' }}
+              />
+              <span className='px-4 pr-8 py-0.5 text-lg sm:text-xl font-semibold tracking-wider
+                text-[#f8fcef] group-hover:text-white transition-colors duration-300 uppercase'>
+                Home
+              </span>
+            </div>
+          </div>
+
+          {/* Rectangle layer — same size as pentagon, for future layering */}
+          {/* <div
+            className='bg-[#1e9de0] p-[2px] transition-all duration-300 group-hover:bg-[#3dbdf0]'
+          >
+            <div
+              className='bg-[#010a13] flex items-center transition-all duration-300 group-hover:bg-[#0a1428]'
+            >
+              <span className='px-4 pr-8 py-0.5 text-lg sm:text-xl font-semibold tracking-wider
+                text-[#f8fcef] group-hover:text-white transition-colors duration-300 uppercase'>
+                Home
+              </span>
+            </div>
+          </div> */}
+
+        </div>
       </a>
 
       {/* Center zone — Navigation tabs */}
