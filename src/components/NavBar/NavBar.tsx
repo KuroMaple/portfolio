@@ -59,10 +59,10 @@ const NavBar = () => {
         className='hidden md:flex gap-10'
       >
         <a
-          href='#technologies'
+          href='#experience'
           className='cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100 hover:text-teal-400'
         >
-          <li>Technologies</li>
+          <li>Experience</li>
         </a>
         <a
           href='#projects'
@@ -119,11 +119,11 @@ const NavBar = () => {
             className='flex flex-col gap-9'
           >
             <a
-              href='#technologies'
+              href='#experience'
               className='cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100 hover:text-teal-400'
               onClick={toggleMenu}
             >
-              <li>Technologies</li>
+              <li>Experience</li>
             </a>
             <a
               href='#projects'

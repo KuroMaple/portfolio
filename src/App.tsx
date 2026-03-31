@@ -2,7 +2,7 @@ import About from './components/About/About'
 import Landing from './components/Landing/Landing'
 import NavBar from './components/NavBar/NavBar'
 import Projects from './components/Projects/Projects'
-import Technologies from './components/Technogies/Technologies'
+import Experience from './components/Experience/Experience'
 import forestBg from './assets/portfolio-forest-bg.png'
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
       >
         <NavBar />
         <Landing />
-        <Technologies />
+        <Experience />
         <Projects />
         <About />
       </main>
