@@ -74,7 +74,7 @@ const About = () => {
         transition={{ duration: 0.8, delay: 0.4 }}
       >
         <h3 className='text-lg md:text-xl font-semibold mb-4 bg-gradient-to-r from-amber-200 to-emerald-300 bg-clip-text text-transparent'>
-          Games Played (so far...)
+          Some of My Favourite Games
         </h3>
         <div className='flex flex-wrap gap-2'>
           {favouriteGames.map((game) => (
