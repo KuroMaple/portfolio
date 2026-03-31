@@ -39,22 +39,36 @@
   font-family: 'Beaufort Bold', sans-serif !important;
 }
 
-*::-webkit-scrollbar {
+body::-webkit-scrollbar {
   width: 8px;
 }
 
-*::-webkit-scrollbar-thumb {
-  background: rgba(52, 211, 153, 0.4);
-  border-radius: 10px;
-  background-clip: padding-box;
+/* For small screens */
+@media (max-width: 768px) {
+  body::-webkit-scrollbar {
+    width: 6px;
+  }
 }
 
-*::-webkit-scrollbar-thumb:hover {
-  background: rgba(52, 211, 153, 0.6);
-  background-clip: padding-box;
+/* For extra small screens */
+@media (max-width: 480px) {
+  body::-webkit-scrollbar {
+    width: 6px;
+  }
 }
 
-*::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.2);
+body::-webkit-scrollbar-thumb {
+  background: #af9560;
   border-radius: 10px;
 }
+
+body::-webkit-scrollbar-track {
+  background: linear-gradient(
+      rgba(18, 43, 60, 1) 0%,
+      rgba(73, 136, 161, 1) 15%,
+      rgba(37, 90, 96, 1) 40%,
+      rgba(41, 90, 101, 1) 50%,
+      rgba(9, 47, 57, 1) 100%
+    );
+}
+
