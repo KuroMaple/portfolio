@@ -58,13 +58,13 @@ const Experience = () => {
   return (
     <div
       id="experience"
-      className="flex min-h-screen w-full flex-col items-center justify-start gap-8 sm:gap-12 py-16 md:py-28 px-4 md:px-16 scroll-mt-20"
+      className="flex min-h-screen w-full flex-col items-center justify-start gap-8 sm:gap-12 py-16 md:py-28 px-4 md:px-16 scroll-mt-15"
     >
-      <h1 className="text-3xl sm:text-4xl font-light text-[#f8fcef] md:text-6xl">
+      <h1 className="text-3xl sm:text-4xl font-semibold text-[#f8fcef] md:text-6xl">
         Experience
       </h1>
 
-      <div className="flex flex-col gap-4 sm:gap-6 w-full max-w-2xl max-h-[55vh] sm:max-h-[60vh] md:max-h-[65vh] overflow-y-auto pr-2 scrollbar-thin">
+      <div className="flex flex-col gap-4 sm:gap-6 w-full max-w-2xl max-h-[55vh] sm:max-h-[60vh] md:max-h-[65vh]  pr-2 scrollbar-thin">
         {experiences.map((exp, i) => (
           <motion.div
             key={i}

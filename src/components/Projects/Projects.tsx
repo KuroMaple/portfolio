@@ -59,9 +59,9 @@ const Projects = () => {
   return (
     <div
       id='projects'
-      className='flex min-h-screen w-full flex-col items-center justify-center gap-8 sm:gap-12 px-4 py-16 md:px-14 md:py-24 scroll-mt-20'
+      className='flex min-h-screen w-full flex-col items-center justify-center gap-8 sm:gap-12 px-4 py-16 md:px-14 md:py-24 scroll-mt-15'
     >
-      <h1 className="text-3xl sm:text-4xl font-light text-[#f8fcef] md:text-6xl">
+      <h1 className="text-3xl sm:text-4xl font-semibold text-[#f8fcef] md:text-6xl">
         Projects
       </h1>
 
@@ -97,7 +97,7 @@ const Projects = () => {
                 Featured
               </span>
             </div>
-            <p className="text-sm opacity-75">A mini game focused on exploration and collecting gems.</p>
+            <p className="text-sm opacity-75">A mini game focused on exploration and collecting gems</p>
             <div className="flex flex-wrap gap-2 mt-3">
               <span className="rounded-full bg-white/10 border border-white/10 px-3 py-1 text-xs opacity-80">Unreal Engine</span>
               <span className="rounded-full bg-white/10 border border-white/10 px-3 py-1 text-xs opacity-80">C++</span>

@@ -15,8 +15,8 @@ function App() {
       >
         <NavBar />
         <Landing />
-        <Experience />
         <Projects />
+        <Experience />
         <About />
       </main>
     </>

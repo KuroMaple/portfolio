@@ -19,7 +19,7 @@ const About = () => {
   return (
     <div
       id='about'
-      className='px-4 sm:px-6 flex min-h-screen w-full items-center justify-center py-16 md:py-28 md:px-12 flex-col gap-6 sm:gap-8 scroll-mt-20'
+      className='px-4 sm:px-6 flex min-h-screen w-full items-center justify-center py-16 md:py-28 md:px-12 flex-col gap-6 sm:gap-8 scroll-mt-15'
     >
       {/* Main card: avatar + intro */}
       <motion.div
