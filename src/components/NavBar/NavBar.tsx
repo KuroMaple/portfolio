@@ -1,18 +1,28 @@
 import { useEffect, useRef, useState } from 'react'
+import { motion } from 'motion/react'
 import { BiMenu, BiX } from 'react-icons/bi'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { TbFileCv } from 'react-icons/tb'
 import logo from '../../assets/logo.png'
 
+const sections = ['landing', 'projects', 'experience', 'about'] as const
+type Section = (typeof sections)[number]
+
+const navTabs: { id: Section; label: string }[] = [
+  { id: 'projects', label: 'Projects' },
+  { id: 'experience', label: 'Experience' },
+  { id: 'about', label: 'About' },
+]
+
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false)
-  const [onLanding, setOnLanding] = useState(true)
+  const [activeSection, setActiveSection] = useState<Section>('landing')
   const prevWidth = useRef(window.innerWidth)
 
+  // Close mobile menu on resize to desktop
   useEffect(() => {
     const handleResize = () => {
       const currentWidth = window.innerWidth
-
       if (prevWidth.current < 768 && currentWidth >= 768) {
         setIsOpen(false)
       }
@@ -20,26 +30,32 @@ const NavBar = () => {
     }
 
     window.addEventListener('resize', handleResize)
-    return () => {
-      window.removeEventListener('resize', handleResize)
-    }
+    return () => window.removeEventListener('resize', handleResize)
   }, [])
 
+  // Track which section is in view
   useEffect(() => {
-    const landingEl = document.getElementById('landing')
-    if (!landingEl) return
-
     const observer = new IntersectionObserver(
-      ([entry]) => setOnLanding(entry.isIntersecting),
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id as Section)
+          }
+        })
+      },
       { threshold: 0.3 }
     )
-    observer.observe(landingEl)
+
+    sections.forEach((id) => {
+      const el = document.getElementById(id)
+      if (el) observer.observe(el)
+    })
+
     return () => observer.disconnect()
   }, [])
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen)
-  }
+  const toggleMenu = () => setIsOpen(!isOpen)
+  const onLanding = activeSection === 'landing'
 
   return (
     <nav
@@ -55,12 +71,12 @@ const NavBar = () => {
       >
         <div className={`flex items-center border border-[#c8aa6e]/60 rounded-lg overflow-hidden
           bg-[#010a13] transition-all duration-150 hover:border-[#c8aa6e] hover:bg-[#0a1428]
-          active:scale-95 active:brightness-75 ${!onLanding && 'shadow-[0_0_15px_rgba(200,170,110,0.3)] hover:shadow-[0_0_25px_rgba(200,170,110,0.6)] animate-gold-glow'}`}>
-          <div className='px-2 py-1.5  '>
+          active:scale-95 active:brightness-75 ${!onLanding ? 'shadow-[0_0_15px_rgba(200,170,110,0.3)] hover:shadow-[0_0_25px_rgba(200,170,110,0.6)] animate-gold-glow' : ''}`}>
+          <div className='px-2 py-1.5'>
             <img
               src={logo}
               alt="Logo"
-              className={`h-8 sm:h-10 w-auto`}
+              className='h-8 sm:h-10 w-auto'
             />
           </div>
           <span className='px-3 py-1.5 text-sm sm:text-base font-semibold tracking-wider
@@ -72,27 +88,47 @@ const NavBar = () => {
 
       {/* Center zone — Navigation tabs */}
       <ul className='hidden md:flex gap-8 items-center'>
-        <a
-          href='#projects'
-          className='relative cursor-pointer text-[#a09b8c] uppercase tracking-wider text-sm font-medium
-            transition-all duration-300 hover:text-emerald-400 pb-2'
-        >
-          <li>Projects</li>
-        </a>
-        <a
-          href='#experience'
-          className='relative cursor-pointer text-[#a09b8c] uppercase tracking-wider text-sm font-medium
-            transition-all duration-300 hover:text-emerald-400 pb-2'
-        >
-          <li>Experience</li>
-        </a>
-        <a
-          href='#about'
-          className='relative cursor-pointer text-[#a09b8c] uppercase tracking-wider text-sm font-medium
-            transition-all duration-300 hover:text-emerald-400 pb-2'
-        >
-          <li>About</li>
-        </a>
+        {navTabs.map((tab) => {
+          const isActive = activeSection === tab.id
+          return (
+            <a
+              key={tab.id}
+              href={`#${tab.id}`}
+              className='relative cursor-pointer uppercase tracking-wider text-sm font-medium
+                transition-colors duration-300 pb-3 pt-2'
+            >
+              {/* V chevron indicator */}
+              {isActive && (
+                <motion.span
+                  layoutId="tab-chevron"
+                  className='absolute -top-1 left-1/2 -translate-x-1/2'
+                  transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+                >
+                  <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+                    <path d="M6 8L0 0H12L6 8Z" fill="#c8aa6e" />
+                  </svg>
+                </motion.span>
+              )}
+
+              <li className={isActive ? 'text-[#c8aa6e]' : 'text-[#a09b8c] hover:text-emerald-400'}>
+                {tab.label}
+              </li>
+
+              {/* Spotlight glow */}
+              {isActive && (
+                <motion.span
+                  layoutId="tab-spotlight"
+                  className='absolute bottom-0 left-1/2 -translate-x-1/2 w-16 h-[3px] rounded-full'
+                  style={{
+                    background: 'radial-gradient(ellipse at center, #c8aa6e 0%, transparent 70%)',
+                    boxShadow: '0 2px 12px rgba(200, 170, 110, 0.6)',
+                  }}
+                  transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+                />
+              )}
+            </a>
+          )
+        })}
       </ul>
 
       {/* Right zone — Social icons */}
@@ -136,30 +172,17 @@ const NavBar = () => {
             bg-gradient-to-b from-[#010a13] to-[#0a1428]'
         >
           <ul className='flex flex-col gap-6'>
-            <a
-              href='#projects'
-              className='cursor-pointer text-[#a09b8c] uppercase tracking-wider text-sm font-medium
-                transition-all duration-300 hover:text-emerald-400'
-              onClick={toggleMenu}
-            >
-              <li>Projects</li>
-            </a>
-            <a
-              href='#experience'
-              className='cursor-pointer text-[#a09b8c] uppercase tracking-wider text-sm font-medium
-                transition-all duration-300 hover:text-emerald-400'
-              onClick={toggleMenu}
-            >
-              <li>Experience</li>
-            </a>
-            <a
-              href='#about'
-              className='cursor-pointer text-[#a09b8c] uppercase tracking-wider text-sm font-medium
-                transition-all duration-300 hover:text-emerald-400'
-              onClick={toggleMenu}
-            >
-              <li>About</li>
-            </a>
+            {navTabs.map((tab) => (
+              <a
+                key={tab.id}
+                href={`#${tab.id}`}
+                className={`cursor-pointer uppercase tracking-wider text-sm font-medium
+                  transition-all duration-300 ${activeSection === tab.id ? 'text-[#c8aa6e]' : 'text-[#a09b8c] hover:text-emerald-400'}`}
+                onClick={toggleMenu}
+              >
+                <li>{tab.label}</li>
+              </a>
+            ))}
           </ul>
 
           <ul className='flex flex-wrap gap-5'>
