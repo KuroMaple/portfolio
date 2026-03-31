@@ -60,18 +60,19 @@ const NavBar = () => {
   return (
     <nav
       className='font-beaufort fixed top-0 z-10 w-full flex items-center justify-between
-        px-4 sm:px-8 md:px-12 py-3
+        px-4 sm:px-8 md:px-12 py-1
         bg-gradient-to-t from-[#4989A2] to-[#0a1428]/77
         border-b border-b-[#c8aa6e]/50'
     >
       {/* Left zone — Logo + HOME fused button */}
       <a
         href='#landing'
-        className='flex items-center select-none group'
+        className='relative flex items-center select-none group pt-2 pb-3'
       >
+
         <div className={`flex items-center border border-[#c8aa6e]/60 rounded-lg overflow-hidden
-          bg-[#010a13] transition-all duration-150 hover:border-[#c8aa6e] hover:bg-[#0a1428]
-          active:scale-95 active:brightness-75 ${!onLanding ? 'shadow-[0_0_15px_rgba(200,170,110,0.3)] hover:shadow-[0_0_25px_rgba(200,170,110,0.6)] animate-gold-glow' : ''}`}>
+          bg-[#010a13] transition-all duration-300 hover:border-[#c8aa6e] hover:bg-[#0a1428]
+          active:scale-95 active:brightness-75 ${onLanding ? 'opacity-50' : 'opacity-100 shadow-[0_0_15px_rgba(200,170,110,0.3)] hover:shadow-[0_0_25px_rgba(200,170,110,0.6)] animate-gold-glow'}`}>
           <div className='px-2 py-1.5'>
             <img
               src={logo}
