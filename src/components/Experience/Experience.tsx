@@ -58,17 +58,11 @@ const Experience = () => {
   return (
     <div
       id="experience"
-      className="flex min-h-screen w-full flex-col items-center justify-start gap-12 py-28 px-4 md:px-16"
+      className="flex min-h-screen w-full flex-col items-center justify-start gap-12 py-28 px-4 md:px-16 scroll-mt-20"
     >
-      <motion.h1
-        variants={variants}
-        initial="hidden"
-        whileInView="visible"
-        transition={{ duration: 0.8, delay: 0.2 }}
-        className="text-4xl font-light text-[#f8fcef] md:text-6xl"
-      >
+      <h1 className="text-4xl font-light text-[#f8fcef] md:text-6xl">
         Experience
-      </motion.h1>
+      </h1>
 
       <div className="flex flex-col gap-6 w-full max-w-2xl max-h-[65vh] overflow-y-auto pr-2 scrollbar-thin">
         {experiences.map((exp, i) => (

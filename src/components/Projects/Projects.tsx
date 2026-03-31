@@ -1,14 +1,15 @@
 import badminton from '../../assets/badmintonIcon.png'
 import pokeball from '../../assets/pokeballIcon.png'
 import cards from '../../assets//card-games-icon.png'
-import pong from '../../assets/pong.png';
+import pong from '../../assets/pong.png'
 import { motion } from 'motion/react'
-import ProjectCard, { Project, ScrollReveal } from './ProjectCard'
-import { useState } from 'react'
+import ProjectCard, { Project } from './ProjectCard'
 import pokeViewBG from '../../assets/pokeviewBG.png'
 import uwbcwebBG from '../../assets/uwbcwebBG.png'
 import nimBG from '../../assets/nimBG.png'
 import cPlusPong from '../../assets/cPlusPong2.png'
+// TODO: Replace with your actual video file path
+import unrealDemo from '../../assets/GemGuroDemo.webm'
 
 const projectsData: Project[] = [
   {
@@ -36,7 +37,7 @@ const projectsData: Project[] = [
     link: 'https://poke-view.netlify.app',
     repo: 'https://github.com/KuroMaple/Poke-View',
     technologies: ['React', 'HTML', 'CSS'],
-    background: pokeViewBG
+    background: pokeViewBG,
   },
   {
     title: 'UWBC Web',
@@ -45,47 +46,81 @@ const projectsData: Project[] = [
     link: 'https://uwbc-web-demo.netlify.app',
     repo: 'https://github.com/KuroMaple/uwbc-web',
     technologies: ['React', 'Django', 'PostgreSQL'],
-    background: uwbcwebBG
+    background: uwbcwebBG,
   },
 ]
 
-
+const variants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0 },
+}
 
 const Projects = () => {
-  const [selectedProject, setSelectedProject] = useState<Project>(projectsData[0])
   return (
     <div
       id='projects'
-      className='flex min-h-screen w-full flex-col items-center justify-center gap-16 p-4 md:px-14 md:py-24'
+      className='flex min-h-screen w-full flex-col items-center justify-center gap-12 p-4 md:px-14 md:py-24 scroll-mt-20'
     >
-      <ScrollReveal>
-        <h1
-          className='text-4xl font-light text-[#f8fcef] md:text-6xl pb-8'
-        >
+      <h1 className="text-4xl font-light text-[#f8fcef] md:text-6xl">
         Projects
-        </h1>
-      
-        <div
-          className={`flex flex-wrap w-full gap-10 text-[#f8fcef] flex-col lg:flex-row`}
+      </h1>
+
+      {/* Featured project — full width video card */}
+      <motion.div
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="w-full max-w-3xl"
+      >
+        <div className="relative overflow-hidden rounded-2xl bg-black/40 backdrop-blur-sm border border-white/10
+          text-[#f8fcef] transition-all duration-300
+          hover:shadow-[0_0_25px_rgba(52,211,153,0.2)]"
         >
-          {
-            projectsData.map((project, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 100 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-              >
-                <ProjectCard
-                  {...project}
-                  selectedProject={selectedProject}
-                  setSelectedProject={setSelectedProject}
-                />
-              </motion.div>
-            ))
-          }
+          {/* Video */}
+          <div className="w-full aspect-video">
+            <video
+              src={unrealDemo}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          {/* Info overlay */}
+          <div className="p-6">
+            <div className="flex items-center justify-between mb-2">
+              <h3 className="text-xl font-semibold">Raven Rally — Unreal Engine</h3>
+              <span className="rounded-full bg-emerald-400/20 border border-emerald-400/40 px-3 py-1 text-xs text-emerald-300">
+                Featured
+              </span>
+            </div>
+            <p className="text-sm opacity-75">A mini game focused on exploration and collecting gems.</p>
+            <div className="flex flex-wrap gap-2 mt-3">
+              <span className="rounded-full bg-white/10 border border-white/10 px-3 py-1 text-xs opacity-80">Unreal Engine</span>
+              <span className="rounded-full bg-white/10 border border-white/10 px-3 py-1 text-xs opacity-80">C++</span>
+            </div>
+          </div>
         </div>
-      </ScrollReveal>
+      </motion.div>
+
+      {/* Project grid */}
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-3xl auto-rows-fr'>
+        {projectsData.map((project, index) => (
+          <motion.div
+            key={project.title}
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 * index }}
+            className="h-full"
+          >
+            <ProjectCard {...project} />
+          </motion.div>
+        ))}
+      </div>
     </div>
   )
 }

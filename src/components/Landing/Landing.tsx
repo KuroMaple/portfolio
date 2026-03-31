@@ -42,16 +42,6 @@ const Landing = () => {
         transition={{ duration: 0.8, delay: 0.6 }}
       >
         <a
-          href='#projects'
-          className='text-nowrap rounded-lg border border-emerald-400/50 bg-black/30 backdrop-blur-sm
-            px-6 py-3 text-lg font-semibold text-[#f8fcef]
-            shadow-[0_0_15px_rgba(52,211,153,0.15)] hover:shadow-[0_0_25px_rgba(52,211,153,0.35)]
-            hover:border-emerald-400 hover:bg-black/40
-            transition-all duration-300 hover:-translate-y-1'
-        >
-          Games
-        </a>
-        <a
           href='#experience'
           className='text-nowrap rounded-lg border border-emerald-400/50 bg-black/30 backdrop-blur-sm
             px-6 py-3 text-lg font-semibold text-[#f8fcef]
@@ -60,6 +50,16 @@ const Landing = () => {
             transition-all duration-300 hover:-translate-y-1'
         >
           Work Experience
+        </a>
+        <a
+          href='#projects'
+          className='text-nowrap rounded-lg border border-emerald-400/50 bg-black/30 backdrop-blur-sm
+            px-6 py-3 text-lg font-semibold text-[#f8fcef]
+            shadow-[0_0_15px_rgba(52,211,153,0.15)] hover:shadow-[0_0_25px_rgba(52,211,153,0.35)]
+            hover:border-emerald-400 hover:bg-black/40
+            transition-all duration-300 hover:-translate-y-1'
+        >
+          Projects
         </a>
         <a
           href='#about'
