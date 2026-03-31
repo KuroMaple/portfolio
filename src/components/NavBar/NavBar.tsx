@@ -79,7 +79,7 @@ const NavBar = () => {
               className='h-8 sm:h-10 w-auto'
             />
           </div>
-          <span className='px-3 py-1.5 text-sm sm:text-base font-semibold tracking-wider
+          <span className='px-3 py-1.5 text-lg sm:text-xl font-semibold tracking-wider
             text-[#c8aa6e] group-hover:text-[#e8d5a3] transition-colors duration-300 uppercase'>
             Home
           </span>
@@ -94,7 +94,7 @@ const NavBar = () => {
             <a
               key={tab.id}
               href={`#${tab.id}`}
-              className='relative cursor-pointer uppercase tracking-wider text-sm font-medium
+              className='relative cursor-pointer uppercase tracking-wider text-lg font-medium
                 transition-colors duration-300 pb-3 pt-2'
             >
               {/* V chevron indicator */}
@@ -110,7 +110,7 @@ const NavBar = () => {
                 </motion.span>
               )}
 
-              <li className={isActive ? 'text-[#c8aa6e]' : 'text-[#a09b8c] hover:text-emerald-400'}>
+              <li className={isActive ? 'text-[#c8aa6e]' : 'text-[#a09b8c] hover:text-[#f0e6d2]'}>
                 {tab.label}
               </li>
 
@@ -134,19 +134,19 @@ const NavBar = () => {
       {/* Right zone — Social icons */}
       <ul className='hidden md:flex gap-5 items-center'>
         <li
-          className='cursor-pointer text-[#a09b8c] transition-all duration-300 hover:text-emerald-400 text-2xl'
+          className='cursor-pointer text-[#a09b8c] transition-all duration-300 hover:text-[#f0e6d2] text-4xl'
           onClick={() => window.open('https://www.linkedin.com/in/hassan-hashmi/', '_blank')}
         >
           <FaLinkedin />
         </li>
         <li
-          className='cursor-pointer text-[#a09b8c] transition-all duration-300 hover:text-teal-400 text-2xl'
+          className='cursor-pointer text-[#a09b8c] transition-all duration-300 hover:text-[#f0e6d2] text-4xl'
           onClick={() => window.open('https://github.com/KuroMaple', '_blank')}
         >
           <FaGithub />
         </li>
         <li
-          className='cursor-pointer text-[#a09b8c] transition-all duration-300 hover:text-cyan-400 text-2xl'
+          className='cursor-pointer text-[#a09b8c] transition-all duration-300 hover:text-[#f0e6d2] text-4xl'
           onClick={() => window.open('https://kuromaple.github.io/resume/', '_blank')}
         >
           <TbFileCv />
@@ -177,7 +177,7 @@ const NavBar = () => {
                 key={tab.id}
                 href={`#${tab.id}`}
                 className={`cursor-pointer uppercase tracking-wider text-sm font-medium
-                  transition-all duration-300 ${activeSection === tab.id ? 'text-[#c8aa6e]' : 'text-[#a09b8c] hover:text-emerald-400'}`}
+                  transition-all duration-300 ${activeSection === tab.id ? 'text-[#c8aa6e]' : 'text-[#a09b8c] hover:text-[#f0e6d2]'}`}
                 onClick={toggleMenu}
               >
                 <li>{tab.label}</li>
@@ -187,19 +187,19 @@ const NavBar = () => {
 
           <ul className='flex flex-wrap gap-5'>
             <li
-              className='cursor-pointer text-[#a09b8c] transition-all duration-300 hover:text-emerald-400 text-2xl'
+              className='cursor-pointer text-[#a09b8c] transition-all duration-300 hover:text-[#f0e6d2] text-2xl'
               onClick={() => window.open('https://www.linkedin.com/in/hassan-hashmi/', '_blank')}
             >
               <FaLinkedin />
             </li>
             <li
-              className='cursor-pointer text-[#a09b8c] transition-all duration-300 hover:text-teal-400 text-2xl'
+              className='cursor-pointer text-[#a09b8c] transition-all duration-300 hover:text-[#f0e6d2] text-2xl'
               onClick={() => window.open('https://github.com/KuroMaple', '_blank')}
             >
               <FaGithub />
             </li>
             <li
-              className='cursor-pointer text-[#a09b8c] transition-all duration-300 hover:text-cyan-400 text-2xl'
+              className='cursor-pointer text-[#a09b8c] transition-all duration-300 hover:text-[#f0e6d2] text-2xl'
               onClick={() => window.open('https://kuromaple.github.io/resume/', '_blank')}
             >
               <TbFileCv />
