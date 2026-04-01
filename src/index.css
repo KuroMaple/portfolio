@@ -20,7 +20,7 @@
 
 @keyframes gold-glow {
   0%, 100% { box-shadow: 0 0 15px rgba(200, 170, 110, 0.3); }
-  50% { box-shadow: 0 0 25px rgba(200, 170, 110, 0.6); }
+  50% { box-shadow: 0 0 25px #C79B3B; }
 }
 
 
