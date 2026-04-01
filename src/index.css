@@ -72,3 +72,13 @@ body::-webkit-scrollbar-track {
     );
 }
 
+* { cursor: url('/cursors/lol-new-cursor.cur'), auto; }
+
+a, a *, button, button *, .cursor-pointer, .cursor-pointer * {
+  cursor: url('/cursors/lol-legacy-cursor.cur'), pointer;
+}
+
+*:active { cursor: url('/cursors/lol-legacy-cursor.cur'), pointer; }
+
+
+
