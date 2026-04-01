@@ -71,8 +71,8 @@ const NavBar = () => {
           transition-all duration-300 active:scale-95 active:brightness-75
           ${onLanding ? 'opacity-50' : 'opacity-100'}`}
       >
-        {/* Button container — logo + pentagon */}
-        <div className={`flex items-center border border-[#C79B3B]/50 overflow-hidden rounded-l-full
+        {/* home button main container */}
+        <div className={`w-50 flex items-center border border-[#C79B3B]/50 overflow-hidden rounded-l-full
           bg-[#000810] transition-all duration-300 hover:border-[#c8aa6e] hover:bg-[#0a1428]
           active:scale-95 active:brightness-75
           ${onLanding ? 'opacity-50' : 'opacity-100 shadow-[0_0_15px_rgba(200,170,110,0.3)] hover:shadow-[0_0_25px_rgba(200,170,110,0.6)] animate-gold-glow'}`}>
@@ -86,47 +86,33 @@ const NavBar = () => {
             />
           </div>
 
-          {/* Pentagon border layer — concave left edge */}
+          {/* Layer container */}
           <div
-            className='z-10 relative -ml-2 bg-[#1e9de0]  pr-1 transition-all duration-300 group-hover:bg-[#3dbdf0]'
-            style={{ clipPath: 'polygon(0% 0%, 87% 0%, 100% 50%, 87% 100%, 0% 100%)' }}
-          >
-            {/* Concave left edge overlay */}
-            <div
-              className='absoluteleft-0 top-0 h-full w-3 bg-[#010a13] transition-all duration-300 group-hover:bg-[#0a1428]'
-              style={{ borderRadius: '0 50% 50% 0' }}
-            />
-            {/* Pentagon inner fill */}
-            <div
-              className='relative bg-[#010a13] flex items-center transition-all duration-300 group-hover:bg-[#0a1428] ml-2.5'
-              style={{ clipPath: 'polygon(0% 0%, 85% 0%, 100% 50%, 85% 100%, 0% 100%)' }}
+            className='relative'
             >
-              {/* Concave left edge overlay (inner) */}
-              <div
-                className='absolute left-0 top-0 h-full w-0.25 bg-[#1e9de0] transition-all duration-300 group-hover:bg-[#3dbdf0]'
-                // style={{ borderRadius: '0 50% 50% 0' }}
-              />
-              <span className='px-4 pr-8 py-0.5 text-lg sm:text-xl font-semibold tracking-wider
-                text-[#f8fcef] group-hover:text-white transition-colors duration-300 uppercase'>
-                Home
-              </span>
-            </div>
-          </div>
-
-          {/* second */}
+            {/* Bottom layer */}
           <div
-            className=' absolute right-1 z-2 bg-[#1e9de0] p-[2px] transition-all duration-300 group-hover:bg-[#3dbdf0]'
+            className='absolute w-fit h-full z-2 bg-[#1e9de0]/30 p-[2px] transition-all duration-300 group-hover:bg-[#3dbdf0]/40'
           >
             <div
-              className='bg-[#010a13] flex items-center transition-all duration-300 group-hover:bg-[#0a1428]'
+              className='w-37.5 h-8 bg-[#010a13] flex items-center transition-all duration-300 group-hover:bg-[#0a1428]'
             >
-              <span className='px-4 pr-8 py-0.5 text-lg sm:text-xl font-semibold tracking-wider
-                text-[#f8fcef] group-hover:text-white transition-colors duration-300 uppercase'>
-                Home
-              </span>
             </div>
           </div>
-
+          
+          {/* Top layer */}
+          <div
+            className='relative w-fit h-full z-3 bg-[#1e9de0] p-[2px] transition-all duration-300 group-hover:bg-[#3dbdf0]'
+            style={{ clipPath: 'polygon(0% 0%, 87% 0%, 100% 50%, 87% 100%, 0% 100%, 4.5% 50%)'}}
+          >
+            <div
+              className='w-37.5 h-8 bg-[#1e2328] flex items-center transition-all duration-300 group-hover:bg-[#1e2328]'
+              style={{ clipPath: 'polygon(0% 0%, 87.5% 0%, 99% 50%, 87.5% 100%, 0% 100%, 5% 50%)'}}
+            >
+            </div>
+          </div>
+          </div>
+          
         </div>
       </a>
 
