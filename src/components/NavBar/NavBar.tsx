@@ -72,7 +72,7 @@ const NavBar = () => {
           ${onLanding ? 'opacity-50' : 'opacity-100'}`}
       >
         {/* home button main container */}
-        <div className={`w-48 flex items-center border border-[#C79B3B]/50 overflow-hidden rounded-l-full
+        <div className={`sm:w-48 flex items-center border border-[#C79B3B]/50 overflow-hidden rounded-full sm:rounded-l-full sm:rounded-r-none
           bg-[#000810] transition-all duration-300 hover:border-[#c8aa6e] hover:bg-[#0a1428]
           active:scale-95 active:brightness-75
           ${onLanding ? 'opacity-50' : 'opacity-100 shadow-[0_0_15px_rgba(200,170,110,0.3)] hover:shadow-[0_0_25px_rgba(200,170,110,0.6)] animate-gold-glow'}`}>
@@ -86,9 +86,9 @@ const NavBar = () => {
             />
           </div>
 
-          {/* Layer container */}
+          {/* Layer container — hidden on smallest screens */}
           <div
-            className='relative'
+            className='relative hidden sm:block'
             >
             {/* Bottom layer */}
           <div
