@@ -72,7 +72,7 @@ const NavBar = () => {
           ${onLanding ? 'opacity-50' : 'opacity-100'}`}
       >
         {/* home button main container */}
-        <div className={`w-50 flex items-center border border-[#C79B3B]/50 overflow-hidden rounded-l-full
+        <div className={`w-48 flex items-center border border-[#C79B3B]/50 overflow-hidden rounded-l-full
           bg-[#000810] transition-all duration-300 hover:border-[#c8aa6e] hover:bg-[#0a1428]
           active:scale-95 active:brightness-75
           ${onLanding ? 'opacity-50' : 'opacity-100 shadow-[0_0_15px_rgba(200,170,110,0.3)] hover:shadow-[0_0_25px_rgba(200,170,110,0.6)] animate-gold-glow'}`}>
@@ -82,7 +82,7 @@ const NavBar = () => {
             <img
               src={logo}
               alt="Logo"
-              className='h-8 sm:h-10 w-auto'
+              className='h-7 sm:h-9 w-auto'
             />
           </div>
 
@@ -92,25 +92,29 @@ const NavBar = () => {
             >
             {/* Bottom layer */}
           <div
-            className='absolute w-fit h-full z-2 bg-[#1e9de0]/30 p-[2px] transition-all duration-300 group-hover:bg-[#3dbdf0]/40'
-          >
-            <div
-              className='w-37.5 h-8 bg-[#010a13] flex items-center transition-all duration-300 group-hover:bg-[#0a1428]'
-            >
-            </div>
-          </div>
+            className='absolute w-37.5 h-8 z-2 bg-[#010a13] border-2 border-l-0
+            border-[#1e9de0]/30 transition-all duration-300 group-hover:bg-[#0a1428] group-hover:border-[#3dbdf0]/40'
+          />
+
           
           {/* Top layer */}
+
           <div
-            className='relative w-fit h-full z-3 bg-[#1e9de0] p-[2px] transition-all duration-300 group-hover:bg-[#3dbdf0]'
-            style={{ clipPath: 'polygon(0% 0%, 87% 0%, 100% 50%, 87% 100%, 0% 100%, 4.5% 50%)'}}
+            className="relative w-37.5 h-8 bg-[#1e9de0] z-3"
+            style={{ clipPath: 'path("M 138 0 L 0 0 Q 12 17 0 32 L 138 32 L 150 16 Z")' }}
           >
+            {/* Inner fill — inset by 2px on all sides */}
             <div
-              className='w-37.5 h-8 bg-[#1e2328] flex items-center transition-all duration-300 group-hover:bg-[#1e2328]'
-              style={{ clipPath: 'polygon(0% 0%, 87.5% 0%, 99% 50%, 87.5% 100%, 0% 100%, 5% 50%)'}}
+              className="absolute w-full h-full bg-[#1e2328] inset-[1px] ml-0.75"
+              style={{ clipPath: 'path("M 131.1 0 L 0 0 Q 11.4 16.15 0 30.4 L 131.1 30.4 L 142.5 15.2 Z")' }}
             >
+              <span className='px-8 pr-8 py-0.5 text-lg sm:text-xl font-semibold tracking-wider
+                text-[#f8fcef] group-hover:text-white transition-colors duration-300 uppercase'>
+                Home
+              </span>
             </div>
           </div>
+
           </div>
           
         </div>
