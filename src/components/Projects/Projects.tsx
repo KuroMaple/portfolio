@@ -8,8 +8,6 @@ import pokeViewBG from '../../assets/pokeviewBG.png'
 import uwbcwebBG from '../../assets/uwbcwebBG.png'
 import nimBG from '../../assets/nimBG.png'
 import cPlusPong from '../../assets/cPlusPong2.png'
-// TODO: Replace with your actual video file path
-import unrealDemo from '../../assets/GemGuroDemo.webm'
 
 const projectsData: Project[] = [
   {
@@ -61,46 +59,77 @@ const Projects = () => {
         Projects
       </h1>
 
-      {/* Featured project — full width video card */}
-      <motion.div
-        initial={{ opacity: 0, y: 60 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        className="w-full max-w-3xl"
-      >
-        <div className="relative overflow-hidden rounded-2xl bg-black/40 backdrop-blur-sm border border-white/10
-          text-[#f8fcef] transition-all duration-300
-          hover:shadow-[0_0_25px_rgba(52,211,153,0.2)]"
-        >
-          {/* Video */}
-          <div className="w-full aspect-video">
-            <video
-              src={unrealDemo}
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full h-full object-cover"
-            />
-          </div>
+      {/* Featured Unreal projects — 2-column wider row */}
+      <div className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
 
-          {/* Info overlay */}
-          <div className="p-4 sm:p-6">
-            <div className="flex items-center justify-between mb-2">
-              <h3 className="text-lg sm:text-xl font-semibold">Raven Rally — Unreal Engine</h3>
-              <span className="rounded-full bg-emerald-400/20 border border-emerald-400/40 px-3 py-1 text-xs text-emerald-300">
-                Featured
-              </span>
+        {/* DDR Clone — YouTube embed */}
+        <motion.div
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="h-full"
+        >
+          <div className="relative overflow-hidden rounded-2xl bg-black/40 backdrop-blur-sm border border-white/10
+            text-[#f8fcef] transition-all duration-300 hover:shadow-[0_0_25px_rgba(52,211,153,0.2)] h-full flex flex-col"
+          >
+            <div className="w-full aspect-video">
+              <iframe
+                src="https://www.youtube.com/embed/t5xNpEB1FV0"
+                title="Dance Dance Revolution Clone"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              />
             </div>
-            <p className="text-sm opacity-75">A mini game focused on exploration and collecting gems</p>
-            <div className="flex flex-wrap gap-2 mt-3">
-              <span className="rounded-full bg-white/10 border border-white/10 px-3 py-1 text-xs opacity-80">Unreal Engine</span>
-              <span className="rounded-full bg-white/10 border border-white/10 px-3 py-1 text-xs opacity-80">C++</span>
+            <div className="p-4 sm:p-6 flex flex-col gap-3 flex-1">
+              <div className="flex items-center justify-between">
+                <h3 className="text-lg sm:text-xl font-semibold">Dance Dance Revolution Clone</h3>
+                <span className="rounded-full bg-emerald-400/20 border border-emerald-400/40 px-3 py-1 text-xs text-emerald-300 shrink-0 ml-2">
+                  Featured
+                </span>
+              </div>
+              <p className="text-sm opacity-75">A DDR-inspired rhythm game built in Unreal Engine and C++</p>
+              <div className="flex flex-wrap gap-2">
+                <span className="rounded-full bg-white/10 border border-white/10 px-3 py-1 text-xs opacity-80">Unreal Engine</span>
+                <span className="rounded-full bg-white/10 border border-white/10 px-3 py-1 text-xs opacity-80">C++</span>
+              </div>
             </div>
           </div>
-        </div>
-      </motion.div>
+        </motion.div>
+
+        {/* Raven Rally — YouTube embed */}
+        <motion.div
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="h-full"
+        >
+          <div className="relative overflow-hidden rounded-2xl bg-black/40 backdrop-blur-sm border border-white/10
+            text-[#f8fcef] transition-all duration-300 hover:shadow-[0_0_25px_rgba(52,211,153,0.2)] h-full flex flex-col"
+          >
+            <div className="w-full aspect-video">
+              <iframe
+                src="https://www.youtube.com/embed/qx9_uQITqI4"
+                title="Raven Rally"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            </div>
+            <div className="p-4 sm:p-6 flex flex-col gap-3 flex-1">
+              <h3 className="text-lg sm:text-xl font-semibold">Raven Rally</h3>
+              <p className="text-sm opacity-75">A mini game focused on exploration and collecting gems</p>
+              <div className="flex flex-wrap gap-2">
+                <span className="rounded-full bg-white/10 border border-white/10 px-3 py-1 text-xs opacity-80">Unreal Engine</span>
+                <span className="rounded-full bg-white/10 border border-white/10 px-3 py-1 text-xs opacity-80">C++</span>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+      </div>
 
       {/* Project grid */}
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 w-full max-w-3xl auto-rows-fr'>
