@@ -4,6 +4,7 @@ import cards from '../../assets//card-games-icon.png'
 import pong from '../../assets/pong.png'
 import { motion } from 'motion/react'
 import ProjectCard, { Project } from './ProjectCard'
+import { FaCodeBranch } from 'react-icons/fa6'
 import pokeViewBG from '../../assets/pokeviewBG.png'
 import uwbcwebBG from '../../assets/uwbcwebBG.png'
 import nimBG from '../../assets/nimBG.png'
@@ -85,9 +86,20 @@ const Projects = () => {
             <div className="p-4 sm:p-6 flex flex-col gap-3 flex-1">
               <div className="flex items-center justify-between">
                 <h3 className="text-lg sm:text-xl font-semibold">Dance Dance Revolution Clone</h3>
-                <span className="rounded-full bg-emerald-400/20 border border-emerald-400/40 px-3 py-1 text-xs text-emerald-300 shrink-0 ml-2">
-                  Featured
-                </span>
+                <div className="flex items-center gap-3 shrink-0 ml-2">
+                  <a
+                    href="https://github.com/KuroMaple/DDR-Clone"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-emerald-400 hover:text-emerald-300 transition-colors duration-200"
+                    title="Source code"
+                  >
+                    <FaCodeBranch className="text-lg" />
+                  </a>
+                  <span className="rounded-full bg-emerald-400/20 border border-emerald-400/40 px-3 py-1 text-xs text-emerald-300">
+                    Featured
+                  </span>
+                </div>
               </div>
               <p className="text-sm opacity-75">A DDR-inspired rhythm game built in Unreal Engine and C++</p>
               <div className="flex flex-wrap gap-2">
