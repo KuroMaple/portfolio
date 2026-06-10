@@ -87,13 +87,6 @@ const About = () => {
               </span>
             </button>
           </div>
-          <img
-            src={avatar}
-            alt="Avatar"
-            className='w-[120px] h-[120px] md:w-[170px] md:h-[170px] rounded-2xl object-cover
-              transition-all duration-300 hover:-translate-y-2
-              shadow-[0_0_20px_rgba(34,197,94,0.3)] hover:shadow-[0_0_35px_rgba(34,197,94,0.5)]'
-          />
           </div>
           
         </div>
