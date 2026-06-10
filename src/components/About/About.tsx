@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { motion } from 'motion/react'
 import { FaLinkedin } from 'react-icons/fa'
 import { TbMail } from 'react-icons/tb'
-import avatar from '../../assets/avatar.png'
 
 const favouriteGames = [
   'Tekken',
