@@ -46,7 +46,7 @@ const About = () => {
           </p>
 
           <p className='text-sm md:text-base opacity-80 leading-relaxed'>
-            Currently I'm exploring Unreal Engine and C++ game development.
+            Currently I'm exploring performance optimization and systems development.
           </p>
           <p className='text-sm md:text-base opacity-80 leading-relaxed'>
             When I'm not coding, you can find me lifting, playing volleyball, or having an adventure irl.

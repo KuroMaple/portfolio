@@ -19,7 +19,7 @@ const experiences: ExperienceEntry[] = [
   {
     company: 'i3 Solutions Inc.',
     title: 'Software Developer',
-    periods: ['Jul 2025 - Present'],
+    periods: ['Jul. 2025 - Pres.'],
     techIcons: [
       <img key="CSharp" src={cSharpIcon} alt="C#" className="w-8 h-8 object-contain" />,
       <img key="cpp" src={cPlusPlusIcon} alt="C++" className="w-8 h-8 object-contain" />,
@@ -31,7 +31,7 @@ const experiences: ExperienceEntry[] = [
   {
     company: 'JANA Corporation',
     title: 'Software Developer',
-    periods: ['May 2024 - Aug 2024', 'May 2023 - Dec 2023'],
+    periods: ['May. 2023 - Aug. 2024'],
     techIcons: [
       <FaReact key="react" className="text-3xl text-blue-400" />,
       <BiLogoTypescript key="ts" className="text-3xl text-sky-500" />,
@@ -42,7 +42,7 @@ const experiences: ExperienceEntry[] = [
   {
     company: 'University of Waterloo',
     title: 'Compilers Instructional Assistant',
-    periods: ['Sep 2022 - Apr 2023'],
+    periods: ['Sep. 2022 - Apr. 2023'],
     techIcons: [
       <img key="cpp" src={cPlusPlusIcon} alt="C++" className="w-8 h-8 object-contain" />,
       <img key="python" src={pythonIcon} alt="Python" className="w-8 h-8 object-contain" />,

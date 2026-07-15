@@ -4,6 +4,7 @@ import { BiMenu, BiX } from 'react-icons/bi'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { TbFileCv } from 'react-icons/tb'
 import logo from '../../assets/logo.png'
+import resume from '../../assets/Hassan Hashmi Resume.pdf?url'
 
 const sections = ['landing', 'projects', 'experience', 'about'] as const
 type Section = (typeof sections)[number]
@@ -96,7 +97,7 @@ const NavBar = () => {
             border-[#1e9de0]/30 transition-all duration-300 group-hover:bg-[#0a1428] group-hover:border-[#3dbdf0]/40'
           />
 
-          
+
           {/* Top layer */}
 
           <div
@@ -116,7 +117,7 @@ const NavBar = () => {
           </div>
 
           </div>
-          
+
         </div>
       </a>
 
@@ -181,7 +182,7 @@ const NavBar = () => {
         </li>
         <li
           className='cursor-pointer text-[#a09b8c] transition-all duration-300 hover:text-[#f0e6d2] text-4xl'
-          onClick={() => window.open('https://kuromaple.github.io/resume/', '_blank')}
+          onClick={() => window.open(resume, '_blank')}
         >
           <TbFileCv />
         </li>
@@ -234,7 +235,7 @@ const NavBar = () => {
             </li>
             <li
               className='cursor-pointer text-[#a09b8c] transition-all duration-300 hover:text-[#f0e6d2] text-2xl'
-              onClick={() => window.open('https://kuromaple.github.io/resume/', '_blank')}
+              onClick={() => window.open(resume, '_blank')}
             >
               <TbFileCv />
             </li>
