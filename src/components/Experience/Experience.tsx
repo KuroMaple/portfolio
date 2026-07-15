@@ -3,6 +3,7 @@ import { BiLogoTypescript } from 'react-icons/bi'
 import { FaReact, FaVuejs } from 'react-icons/fa'
 import { RiTailwindCssFill } from 'react-icons/ri'
 import { SiFlutter } from 'react-icons/si'
+import { FiArrowRight } from 'react-icons/fi'
 import cPlusPlusIcon from '../../assets/c-.png'
 import cSharpIcon from '../../assets/c-sharp.png'
 import pythonIcon from '../../assets/python.png'
@@ -103,6 +104,22 @@ const Experience = () => {
             </div>
           </motion.div>
         ))}
+
+        {/* Resume link — navigates to the dedicated resume page */}
+        <motion.a
+          href="#resume"
+          variants={variants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.15 * experiences.length }}
+          className="group mt-1 flex items-center gap-2 self-center rounded-full border border-[#c8aa6e]/40 bg-black/30
+            px-5 py-2 text-sm sm:text-base text-[#f0e6d2] backdrop-blur-sm transition-all duration-300
+            hover:border-[#c8aa6e] hover:bg-[#0a1428] hover:text-emerald-300 hover:shadow-[0_0_20px_rgba(200,170,110,0.35)]"
+        >
+          <span className="tracking-wide">Resume</span>
+          <FiArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+        </motion.a>
       </div>
     </div>
   )

@@ -4,7 +4,6 @@ import { BiMenu, BiX } from 'react-icons/bi'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { TbFileCv } from 'react-icons/tb'
 import logo from '../../assets/logo.png'
-import resume from '../../assets/Hassan Hashmi Resume.pdf?url'
 
 const sections = ['landing', 'projects', 'experience', 'about'] as const
 type Section = (typeof sections)[number]
@@ -181,8 +180,13 @@ const NavBar = () => {
           <FaGithub />
         </li>
         <li
-          className='cursor-pointer text-[#a09b8c] transition-all duration-300 hover:text-[#f0e6d2] text-4xl'
-          onClick={() => window.open(resume, '_blank')}
+          className={`cursor-pointer transition-all duration-300 text-4xl ${
+            activeSection === 'experience'
+              ? 'text-emerald-300 animate-bounce-subtle drop-shadow-[0_0_10px_rgba(52,211,153,0.6)]'
+              : 'text-[#a09b8c] hover:text-[#f0e6d2]'
+          }`}
+          title='View resume'
+          onClick={() => { window.location.hash = 'resume' }}
         >
           <TbFileCv />
         </li>
@@ -235,7 +239,7 @@ const NavBar = () => {
             </li>
             <li
               className='cursor-pointer text-[#a09b8c] transition-all duration-300 hover:text-[#f0e6d2] text-2xl'
-              onClick={() => window.open(resume, '_blank')}
+              onClick={() => { window.location.hash = 'resume' }}
             >
               <TbFileCv />
             </li>
