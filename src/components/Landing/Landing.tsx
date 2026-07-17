@@ -32,7 +32,7 @@ const Landing = () => {
         animate={{ opacity: 0.85, y: 0 }}
         transition={{ duration: 0.8, delay: 0.3 }}
       >
-        I write production code by day and make games by night
+        I build production software by day and high-performance systems by night
       </motion.p>
 
       <motion.div
